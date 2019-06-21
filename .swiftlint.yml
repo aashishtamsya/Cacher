@@ -1,0 +1,8 @@
+disabled_rules:
+  - line_length
+  - trailing_whitespace
+  - type_name
+  - variable_name
+  - force_try
+  - force_cast
+  - implicit_getter
