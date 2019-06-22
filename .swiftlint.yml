@@ -6,3 +6,7 @@ disabled_rules:
   - force_try
   - force_cast
   - implicit_getter
+  
+exclude:
+ - Pods/
+ - CacherTests/	  
