@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FDD7DE6822BE0B680016639A"
+               BuildableName = "CacherTests.xctest"
+               BlueprintName = "CacherTests"
+               ReferencedContainer = "container:Cacher.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FDFE6BFD22BD32E4008699C9"
+            BuildableName = "Cacher.framework"
+            BlueprintName = "Cacher"
+            ReferencedContainer = "container:Cacher.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
