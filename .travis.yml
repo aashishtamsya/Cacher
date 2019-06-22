@@ -1,7 +1,7 @@
 language: swift
 
 osx_image: 
-- xcode10.2.1
+- xcode10.2
 
 env:
 - SCHEME=Cacher SWIFT_VERSION=5.0
@@ -10,4 +10,4 @@ xcode_project: Cacher.xcodeproj
 
 xcode_scheme: Cacher
 
-xcode_sdk: iphonesimulator8.4
+xcode_sdk: iphonesimulator10.2
