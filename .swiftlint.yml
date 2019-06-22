@@ -6,7 +6,9 @@ disabled_rules:
   - force_try
   - force_cast
   - implicit_getter
+  - file_length
   
 excluded:
+ - Carthage/
  - Pods/
- - CacherTests/	  
+ - CacherTests/
