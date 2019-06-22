@@ -2,11 +2,11 @@ disabled_rules:
   - line_length
   - trailing_whitespace
   - type_name
-  - variable_name
+  - identifier_name
   - force_try
   - force_cast
   - implicit_getter
   
-exclude:
+excluded:
  - Pods/
  - CacherTests/	  
