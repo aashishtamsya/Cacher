@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FDC9DDBD22C0980A00A56670 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDBC22C0980A00A56670 /* Cache.swift */; };
+		FDC9DDBF22C0985000A56670 /* Cachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDBE22C0985000A56670 /* Cachable.swift */; };
+		FDC9DDC122C098E400A56670 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDC022C098E400A56670 /* MemoryCache.swift */; };
+		FDC9DDC422C099EE00A56670 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDC322C099EE00A56670 /* Cacher.swift */; };
+		FDC9DDC922C09B9700A56670 /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDC822C09B9700A56670 /* CacheTests.swift */; };
+		FDC9DDCB22C09D4D00A56670 /* UIImage+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDCA22C09D4D00A56670 /* UIImage+Cache.swift */; };
 		FDD7DE6C22BE0B680016639A /* CacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7DE6B22BE0B680016639A /* CacherTests.swift */; };
 		FDD7DE6E22BE0B680016639A /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFE6BFE22BD32E4008699C9 /* Cacher.framework */; };
 		FDFE6C0322BD32E4008699C9 /* Cacher.h in Headers */ = {isa = PBXBuildFile; fileRef = FDFE6C0122BD32E4008699C9 /* Cacher.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +29,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FDC9DDBC22C0980A00A56670 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		FDC9DDBE22C0985000A56670 /* Cachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
+		FDC9DDC022C098E400A56670 /* MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
+		FDC9DDC322C099EE00A56670 /* Cacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
+		FDC9DDC822C09B9700A56670 /* CacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
+		FDC9DDCA22C09D4D00A56670 /* UIImage+Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Cache.swift"; sourceTree = "<group>"; };
 		FDD7DE6922BE0B680016639A /* CacherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7DE6B22BE0B680016639A /* CacherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacherTests.swift; sourceTree = "<group>"; };
 		FDD7DE6D22BE0B680016639A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,10 +62,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FDC9DDC222C098E700A56670 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				FDC9DDBC22C0980A00A56670 /* Cache.swift */,
+				FDC9DDC022C098E400A56670 /* MemoryCache.swift */,
+				FDC9DDBE22C0985000A56670 /* Cachable.swift */,
+				FDC9DDC322C099EE00A56670 /* Cacher.swift */,
+				FDC9DDCA22C09D4D00A56670 /* UIImage+Cache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		FDC9DDC722C09B8500A56670 /* CacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDC9DDC822C09B9700A56670 /* CacheTests.swift */,
+			);
+			path = CacheTests;
+			sourceTree = "<group>";
+		};
 		FDD7DE6A22BE0B680016639A /* CacherTests */ = {
 			isa = PBXGroup;
 			children = (
 				FDD7DE6B22BE0B680016639A /* CacherTests.swift */,
+				FDC9DDC722C09B8500A56670 /* CacheTests */,
 				FDD7DE6D22BE0B680016639A /* Info.plist */,
 			);
 			path = CacherTests;
@@ -81,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				FDFE6C0122BD32E4008699C9 /* Cacher.h */,
+				FDC9DDC222C098E700A56670 /* Cache */,
 				FDFE6C0222BD32E4008699C9 /* Info.plist */,
 			);
 			path = Sources;
@@ -152,6 +186,7 @@
 					};
 					FDFE6BFD22BD32E4008699C9 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -216,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC9DDC922C09B9700A56670 /* CacheTests.swift in Sources */,
 				FDD7DE6C22BE0B680016639A /* CacherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC9DDC122C098E400A56670 /* MemoryCache.swift in Sources */,
+				FDC9DDC422C099EE00A56670 /* Cacher.swift in Sources */,
+				FDC9DDBF22C0985000A56670 /* Cachable.swift in Sources */,
+				FDC9DDBD22C0980A00A56670 /* Cache.swift in Sources */,
+				FDC9DDCB22C09D4D00A56670 /* UIImage+Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +282,7 @@
 		FDD7DE7122BE0B680016639A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88PCJ8ST7Y;
 				INFOPLIST_FILE = CacherTests/Info.plist;
@@ -259,6 +301,7 @@
 		FDD7DE7222BE0B680016639A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88PCJ8ST7Y;
 				INFOPLIST_FILE = CacherTests/Info.plist;
@@ -399,6 +442,7 @@
 		FDFE6C0722BD32E4008699C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -416,6 +460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aashishtamsya.ios.Cacher;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -424,6 +469,7 @@
 		FDFE6C0822BD32E4008699C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
