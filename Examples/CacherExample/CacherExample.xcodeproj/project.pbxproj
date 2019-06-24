@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37A9126B9340836E039D933E /* Pods_CacherExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC49666D4661D92980E76 /* Pods_CacherExample.framework */; };
+		539690206A7D918CA6F9D6BE /* Pods_CacherExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE4DB622C94F6F51CDB164B /* Pods_CacherExampleTests.framework */; };
 		FD2F69DD22C0CE31003FD42D /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2F69DC22C0CE31003FD42D /* Cacher.framework */; };
 		FD2F69DE22C0CE36003FD42D /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2F69DC22C0CE31003FD42D /* Cacher.framework */; };
 		FD2F69DF22C0CE36003FD42D /* Cacher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD2F69DC22C0CE31003FD42D /* Cacher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -23,6 +24,9 @@
 		FD2F6A0422C0D6F5003FD42D /* Unsplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2F6A0322C0D6F5003FD42D /* Unsplash.storyboard */; };
 		FD2F6A0622C0D708003FD42D /* UnsplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A0522C0D708003FD42D /* UnsplashViewController.swift */; };
 		FD2F6A0822C0D82E003FD42D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A0722C0D82E003FD42D /* String+Extensions.swift */; };
+		FD2F6A0B22C0DAFD003FD42D /* UnsplashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A0A22C0DAFD003FD42D /* UnsplashManager.swift */; };
+		FD2F6A1322C0DD82003FD42D /* CacherExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A1222C0DD82003FD42D /* CacherExampleTests.swift */; };
+		FD2F6A1C22C0DD98003FD42D /* ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A1B22C0DD98003FD42D /* ManagerTests.swift */; };
 		FDC9DDD922C0A07B00A56670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDD822C0A07B00A56670 /* AppDelegate.swift */; };
 		FDC9DDDB22C0A07B00A56670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDDA22C0A07B00A56670 /* ViewController.swift */; };
 		FDC9DDDE22C0A07B00A56670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DDDC22C0A07B00A56670 /* Main.storyboard */; };
@@ -33,6 +37,16 @@
 		FDC9DE1422C0B36300A56670 /* ListImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DE1222C0B36300A56670 /* ListImageCell.swift */; };
 		FDC9DE1522C0B36300A56670 /* ListImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DE1322C0B36300A56670 /* ListImageCell.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD2F6A1522C0DD82003FD42D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDC9DDCD22C0A07B00A56670 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDC9DDD422C0A07B00A56670;
+			remoteInfo = CacherExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		FDC9DDEE22C0A0A100A56670 /* Embed Frameworks */ = {
@@ -49,9 +63,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3CE4DB622C94F6F51CDB164B /* Pods_CacherExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CacherExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4013543FD2984A468DFD7F6A /* Pods-CacherExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExample.release.xcconfig"; path = "Target Support Files/Pods-CacherExample/Pods-CacherExample.release.xcconfig"; sourceTree = "<group>"; };
 		7DDEC49666D4661D92980E76 /* Pods_CacherExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CacherExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CA6E94CCB6CCBF6C6E7E65 /* Pods-CacherExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExample.debug.xcconfig"; path = "Target Support Files/Pods-CacherExample/Pods-CacherExample.debug.xcconfig"; sourceTree = "<group>"; };
+		AC3D14BC5CD1554C8D96AB49 /* Pods-CacherExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-CacherExampleTests/Pods-CacherExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA0045CC43266F698EC6694E /* Pods-CacherExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExampleTests.release.xcconfig"; path = "Target Support Files/Pods-CacherExampleTests/Pods-CacherExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD2F69DC22C0CE31003FD42D /* Cacher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cacher.framework; sourceTree = "<group>"; };
 		FD2F69E922C0D1BB003FD42D /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		FD2F69EC22C0D1FF003FD42D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -65,6 +82,11 @@
 		FD2F6A0322C0D6F5003FD42D /* Unsplash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Unsplash.storyboard; sourceTree = "<group>"; };
 		FD2F6A0522C0D708003FD42D /* UnsplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashViewController.swift; sourceTree = "<group>"; };
 		FD2F6A0722C0D82E003FD42D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		FD2F6A0A22C0DAFD003FD42D /* UnsplashManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashManager.swift; sourceTree = "<group>"; };
+		FD2F6A1022C0DD82003FD42D /* CacherExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacherExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD2F6A1222C0DD82003FD42D /* CacherExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacherExampleTests.swift; sourceTree = "<group>"; };
+		FD2F6A1422C0DD82003FD42D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD2F6A1B22C0DD98003FD42D /* ManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerTests.swift; sourceTree = "<group>"; };
 		FDC9DDD522C0A07B00A56670 /* CacherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CacherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC9DDD822C0A07B00A56670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC9DDDA22C0A07B00A56670 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +101,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FD2F6A0D22C0DD82003FD42D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				539690206A7D918CA6F9D6BE /* Pods_CacherExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDC9DDD222C0A07B00A56670 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +127,8 @@
 			children = (
 				A4CA6E94CCB6CCBF6C6E7E65 /* Pods-CacherExample.debug.xcconfig */,
 				4013543FD2984A468DFD7F6A /* Pods-CacherExample.release.xcconfig */,
+				AC3D14BC5CD1554C8D96AB49 /* Pods-CacherExampleTests.debug.xcconfig */,
+				BA0045CC43266F698EC6694E /* Pods-CacherExampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -105,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				7DDEC49666D4661D92980E76 /* Pods_CacherExample.framework */,
+				3CE4DB622C94F6F51CDB164B /* Pods_CacherExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,6 +145,7 @@
 		FD2F69E622C0D18E003FD42D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FD2F6A0922C0DAEE003FD42D /* Manager */,
 				FD2F69E822C0D1B3003FD42D /* Model */,
 				FD2F69EE22C0D252003FD42D /* Shared */,
 			);
@@ -175,11 +209,38 @@
 			path = Unsplash;
 			sourceTree = "<group>";
 		};
+		FD2F6A0922C0DAEE003FD42D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F6A0A22C0DAFD003FD42D /* UnsplashManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FD2F6A1122C0DD82003FD42D /* CacherExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F6A1222C0DD82003FD42D /* CacherExampleTests.swift */,
+				FD2F6A1A22C0DD87003FD42D /* ManagerTests */,
+				FD2F6A1422C0DD82003FD42D /* Info.plist */,
+			);
+			path = CacherExampleTests;
+			sourceTree = "<group>";
+		};
+		FD2F6A1A22C0DD87003FD42D /* ManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F6A1B22C0DD98003FD42D /* ManagerTests.swift */,
+			);
+			path = ManagerTests;
+			sourceTree = "<group>";
+		};
 		FDC9DDCC22C0A07B00A56670 = {
 			isa = PBXGroup;
 			children = (
 				FD2F69DC22C0CE31003FD42D /* Cacher.framework */,
 				FDC9DDD722C0A07B00A56670 /* CacherExample */,
+				FD2F6A1122C0DD82003FD42D /* CacherExampleTests */,
 				FDC9DDD622C0A07B00A56670 /* Products */,
 				7CECB6C17015457CA18B22A3 /* Pods */,
 				A012DC33030CEDB05E611139 /* Frameworks */,
@@ -190,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC9DDD522C0A07B00A56670 /* CacherExample.app */,
+				FD2F6A1022C0DD82003FD42D /* CacherExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +326,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FD2F6A0F22C0DD82003FD42D /* CacherExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD2F6A1722C0DD82003FD42D /* Build configuration list for PBXNativeTarget "CacherExampleTests" */;
+			buildPhases = (
+				1CD11F2AA539B1A1FB38F66F /* [CP] Check Pods Manifest.lock */,
+				FD2F6A0C22C0DD82003FD42D /* Sources */,
+				FD2F6A0D22C0DD82003FD42D /* Frameworks */,
+				FD2F6A0E22C0DD82003FD42D /* Resources */,
+				98156D29D35C2C72C2CE14C9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD2F6A1622C0DD82003FD42D /* PBXTargetDependency */,
+			);
+			name = CacherExampleTests;
+			productName = CacherExampleTests;
+			productReference = FD2F6A1022C0DD82003FD42D /* CacherExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FDC9DDD422C0A07B00A56670 /* CacherExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDC9DDE722C0A07C00A56670 /* Build configuration list for PBXNativeTarget "CacherExample" */;
@@ -294,6 +376,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Aashish Tamsya";
 				TargetAttributes = {
+					FD2F6A0F22C0DD82003FD42D = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = FDC9DDD422C0A07B00A56670;
+					};
 					FDC9DDD422C0A07B00A56670 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -313,11 +399,19 @@
 			projectRoot = "";
 			targets = (
 				FDC9DDD422C0A07B00A56670 /* CacherExample */,
+				FD2F6A0F22C0DD82003FD42D /* CacherExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FD2F6A0E22C0DD82003FD42D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDC9DDD322C0A07B00A56670 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,6 +429,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1CD11F2AA539B1A1FB38F66F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CacherExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98156D29D35C2C72C2CE14C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CacherExampleTests/Pods-CacherExampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CacherExampleTests/Pods-CacherExampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CacherExampleTests/Pods-CacherExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BDBEC5B3517B276ABFB79A10 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,6 +510,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FD2F6A0C22C0DD82003FD42D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD2F6A1322C0DD82003FD42D /* CacherExampleTests.swift in Sources */,
+				FD2F6A1C22C0DD98003FD42D /* ManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDC9DDD122C0A07B00A56670 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -391,6 +533,7 @@
 				FD2F6A0122C0D6CE003FD42D /* Result.swift in Sources */,
 				FD2F6A0822C0D82E003FD42D /* String+Extensions.swift in Sources */,
 				FD2F69F422C0D53F003FD42D /* HTTPOperationManager.swift in Sources */,
+				FD2F6A0B22C0DAFD003FD42D /* UnsplashManager.swift in Sources */,
 				FD2F69EA22C0D1BB003FD42D /* Asset.swift in Sources */,
 				FD2F69F022C0D25C003FD42D /* Decoder.swift in Sources */,
 				FDC9DDD922C0A07B00A56670 /* AppDelegate.swift in Sources */,
@@ -399,6 +542,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD2F6A1622C0DD82003FD42D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDC9DDD422C0A07B00A56670 /* CacherExample */;
+			targetProxy = FD2F6A1522C0DD82003FD42D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FD2F69FC22C0D618003FD42D /* Localizable.strings */ = {
@@ -428,6 +579,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FD2F6A1822C0DD82003FD42D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC3D14BC5CD1554C8D96AB49 /* Pods-CacherExampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88PCJ8ST7Y;
+				INFOPLIST_FILE = CacherExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aashishtamsya.ios.CacherExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CacherExample.app/CacherExample";
+			};
+			name = Debug;
+		};
+		FD2F6A1922C0DD82003FD42D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA0045CC43266F698EC6694E /* Pods-CacherExampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88PCJ8ST7Y;
+				INFOPLIST_FILE = CacherExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aashishtamsya.ios.CacherExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CacherExample.app/CacherExample";
+			};
+			name = Release;
+		};
 		FDC9DDE522C0A07C00A56670 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -593,6 +786,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FD2F6A1722C0DD82003FD42D /* Build configuration list for PBXNativeTarget "CacherExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD2F6A1822C0DD82003FD42D /* Debug */,
+				FD2F6A1922C0DD82003FD42D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FDC9DDD022C0A07B00A56670 /* Build configuration list for PBXProject "CacherExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

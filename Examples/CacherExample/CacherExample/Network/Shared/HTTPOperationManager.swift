@@ -12,8 +12,7 @@ import Reachability
 import SwiftyJSON
 
 let scheme = "https"
-let host   = "api.waqi.info"
-let token  = "e070f8af14e04dd911145b0c818055cdb4359eef"
+let host   = "pastebin.com"
 
 var APIBaseURL: String {
   get {
