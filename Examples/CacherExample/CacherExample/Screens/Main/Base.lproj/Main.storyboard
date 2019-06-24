@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="NAD-Bv-KAQ">
-                                <rect key="frame" x="87" y="112" width="240" height="382"/>
+                                <rect key="frame" x="87" y="112" width="240" height="434"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aSX-4I-ihN">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -47,6 +47,13 @@
                                         <state key="normal" title="List View"/>
                                         <connections>
                                             <action selector="listViewButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBY-SE-H6z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eQ-S3-jh3">
+                                        <rect key="frame" x="37" y="404" width="166" height="30"/>
+                                        <state key="normal" title="Unsplash Implmentation"/>
+                                        <connections>
+                                            <action selector="unsplashButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hn-VX-hSj"/>
                                         </connections>
                                     </button>
                                 </subviews>

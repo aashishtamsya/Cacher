@@ -56,4 +56,7 @@ private extension ViewController {
   @IBAction func listViewButtonSelected(_ sender: UIButton) {
     navigationController?.pushViewController(ListViewController.listViewController(), animated: true)
   }
+  @IBAction func unsplashButtonSelected(_ sender: UIButton) {
+    navigationController?.pushViewController(UnsplashViewController.unsplashViewController(), animated: true)
+  }
 }
