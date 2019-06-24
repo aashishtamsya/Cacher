@@ -13,6 +13,9 @@
 		FDC9DDC422C099EE00A56670 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDC322C099EE00A56670 /* Cacher.swift */; };
 		FDC9DDC922C09B9700A56670 /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDC822C09B9700A56670 /* CacheTests.swift */; };
 		FDC9DDCB22C09D4D00A56670 /* UIImage+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDCA22C09D4D00A56670 /* UIImage+Cache.swift */; };
+		FDC9DDF722C0A40A00A56670 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDF622C0A40A00A56670 /* Download.swift */; };
+		FDC9DDFB22C0A61500A56670 /* Data+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDFA22C0A61500A56670 /* Data+Cache.swift */; };
+		FDC9DE0322C0B02D00A56670 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DE0222C0B02D00A56670 /* NetworkTests.swift */; };
 		FDD7DE6C22BE0B680016639A /* CacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7DE6B22BE0B680016639A /* CacherTests.swift */; };
 		FDD7DE6E22BE0B680016639A /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFE6BFE22BD32E4008699C9 /* Cacher.framework */; };
 		FDFE6C0322BD32E4008699C9 /* Cacher.h in Headers */ = {isa = PBXBuildFile; fileRef = FDFE6C0122BD32E4008699C9 /* Cacher.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +38,9 @@
 		FDC9DDC322C099EE00A56670 /* Cacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
 		FDC9DDC822C09B9700A56670 /* CacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
 		FDC9DDCA22C09D4D00A56670 /* UIImage+Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Cache.swift"; sourceTree = "<group>"; };
+		FDC9DDF622C0A40A00A56670 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		FDC9DDFA22C0A61500A56670 /* Data+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Cache.swift"; sourceTree = "<group>"; };
+		FDC9DE0222C0B02D00A56670 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		FDD7DE6922BE0B680016639A /* CacherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7DE6B22BE0B680016639A /* CacherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacherTests.swift; sourceTree = "<group>"; };
 		FDD7DE6D22BE0B680016639A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,7 +75,6 @@
 				FDC9DDC022C098E400A56670 /* MemoryCache.swift */,
 				FDC9DDBE22C0985000A56670 /* Cachable.swift */,
 				FDC9DDC322C099EE00A56670 /* Cacher.swift */,
-				FDC9DDCA22C09D4D00A56670 /* UIImage+Cache.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -82,12 +87,38 @@
 			path = CacheTests;
 			sourceTree = "<group>";
 		};
+		FDC9DDF322C0A3E700A56670 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FDC9DDF622C0A40A00A56670 /* Download.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FDC9DDFF22C0AFCE00A56670 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDC9DDFA22C0A61500A56670 /* Data+Cache.swift */,
+				FDC9DDCA22C09D4D00A56670 /* UIImage+Cache.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDC9DE0122C0B01200A56670 /* NetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDC9DE0222C0B02D00A56670 /* NetworkTests.swift */,
+			);
+			path = NetworkTests;
+			sourceTree = "<group>";
+		};
 		FDD7DE6A22BE0B680016639A /* CacherTests */ = {
 			isa = PBXGroup;
 			children = (
+				FDD7DE6D22BE0B680016639A /* Info.plist */,
 				FDD7DE6B22BE0B680016639A /* CacherTests.swift */,
 				FDC9DDC722C09B8500A56670 /* CacheTests */,
-				FDD7DE6D22BE0B680016639A /* Info.plist */,
+				FDC9DE0122C0B01200A56670 /* NetworkTests */,
 			);
 			path = CacherTests;
 			sourceTree = "<group>";
@@ -114,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				FDFE6C0122BD32E4008699C9 /* Cacher.h */,
+				FDC9DDFF22C0AFCE00A56670 /* Extensions */,
+				FDC9DDF322C0A3E700A56670 /* Network */,
 				FDC9DDC222C098E700A56670 /* Cache */,
 				FDFE6C0222BD32E4008699C9 /* Info.plist */,
 			);
@@ -251,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC9DE0322C0B02D00A56670 /* NetworkTests.swift in Sources */,
 				FDC9DDC922C09B9700A56670 /* CacheTests.swift in Sources */,
 				FDD7DE6C22BE0B680016639A /* CacherTests.swift in Sources */,
 			);
@@ -263,7 +297,9 @@
 				FDC9DDC122C098E400A56670 /* MemoryCache.swift in Sources */,
 				FDC9DDC422C099EE00A56670 /* Cacher.swift in Sources */,
 				FDC9DDBF22C0985000A56670 /* Cachable.swift in Sources */,
+				FDC9DDFB22C0A61500A56670 /* Data+Cache.swift in Sources */,
 				FDC9DDBD22C0980A00A56670 /* Cache.swift in Sources */,
+				FDC9DDF722C0A40A00A56670 /* Download.swift in Sources */,
 				FDC9DDCB22C09D4D00A56670 /* UIImage+Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
