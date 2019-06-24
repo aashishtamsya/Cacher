@@ -15,6 +15,14 @@
 		FD2F69ED22C0D1FF003FD42D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69EC22C0D1FF003FD42D /* User.swift */; };
 		FD2F69F022C0D25C003FD42D /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69EF22C0D25C003FD42D /* Decoder.swift */; };
 		FD2F69F222C0D3EA003FD42D /* AssetURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69F122C0D3EA003FD42D /* AssetURLs.swift */; };
+		FD2F69F422C0D53F003FD42D /* HTTPOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69F322C0D53F003FD42D /* HTTPOperationManager.swift */; };
+		FD2F69F622C0D5EA003FD42D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69F522C0D5EA003FD42D /* APIError.swift */; };
+		FD2F69FA22C0D618003FD42D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD2F69FC22C0D618003FD42D /* Localizable.strings */; };
+		FD2F69FF22C0D649003FD42D /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69FE22C0D649003FD42D /* UIApplication+Extensions.swift */; };
+		FD2F6A0122C0D6CE003FD42D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A0022C0D6CE003FD42D /* Result.swift */; };
+		FD2F6A0422C0D6F5003FD42D /* Unsplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2F6A0322C0D6F5003FD42D /* Unsplash.storyboard */; };
+		FD2F6A0622C0D708003FD42D /* UnsplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A0522C0D708003FD42D /* UnsplashViewController.swift */; };
+		FD2F6A0822C0D82E003FD42D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A0722C0D82E003FD42D /* String+Extensions.swift */; };
 		FDC9DDD922C0A07B00A56670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDD822C0A07B00A56670 /* AppDelegate.swift */; };
 		FDC9DDDB22C0A07B00A56670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDDA22C0A07B00A56670 /* ViewController.swift */; };
 		FDC9DDDE22C0A07B00A56670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DDDC22C0A07B00A56670 /* Main.storyboard */; };
@@ -49,6 +57,14 @@
 		FD2F69EC22C0D1FF003FD42D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FD2F69EF22C0D25C003FD42D /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		FD2F69F122C0D3EA003FD42D /* AssetURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetURLs.swift; sourceTree = "<group>"; };
+		FD2F69F322C0D53F003FD42D /* HTTPOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPOperationManager.swift; sourceTree = "<group>"; };
+		FD2F69F522C0D5EA003FD42D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		FD2F69FB22C0D618003FD42D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FD2F69FE22C0D649003FD42D /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		FD2F6A0022C0D6CE003FD42D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FD2F6A0322C0D6F5003FD42D /* Unsplash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Unsplash.storyboard; sourceTree = "<group>"; };
+		FD2F6A0522C0D708003FD42D /* UnsplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashViewController.swift; sourceTree = "<group>"; };
+		FD2F6A0722C0D82E003FD42D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FDC9DDD522C0A07B00A56670 /* CacherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CacherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC9DDD822C0A07B00A56670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC9DDDA22C0A07B00A56670 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,8 +112,8 @@
 		FD2F69E622C0D18E003FD42D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FD2F69EE22C0D252003FD42D /* Shared */,
 				FD2F69E822C0D1B3003FD42D /* Model */,
+				FD2F69EE22C0D252003FD42D /* Shared */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -105,6 +121,8 @@
 		FD2F69E722C0D198003FD42D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FD2F69FD22C0D63B003FD42D /* Extensions */,
+				FD2F69F722C0D5F7003FD42D /* Localization */,
 				FDC9DE0D22C0B32000A56670 /* Views */,
 			);
 			path = Shared;
@@ -124,8 +142,37 @@
 			isa = PBXGroup;
 			children = (
 				FD2F69EF22C0D25C003FD42D /* Decoder.swift */,
+				FD2F69F322C0D53F003FD42D /* HTTPOperationManager.swift */,
+				FD2F69F522C0D5EA003FD42D /* APIError.swift */,
+				FD2F6A0022C0D6CE003FD42D /* Result.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		FD2F69F722C0D5F7003FD42D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F69FC22C0D618003FD42D /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		FD2F69FD22C0D63B003FD42D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F69FE22C0D649003FD42D /* UIApplication+Extensions.swift */,
+				FD2F6A0722C0D82E003FD42D /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FD2F6A0222C0D6EA003FD42D /* Unsplash */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F6A0522C0D708003FD42D /* UnsplashViewController.swift */,
+				FD2F6A0322C0D6F5003FD42D /* Unsplash.storyboard */,
+			);
+			path = Unsplash;
 			sourceTree = "<group>";
 		};
 		FDC9DDCC22C0A07B00A56670 = {
@@ -181,6 +228,7 @@
 		FDC9DE0E22C0B32400A56670 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FD2F6A0222C0D6EA003FD42D /* Unsplash */,
 				FDC9DE0F22C0B33700A56670 /* Main */,
 				FDC9DE0822C0B25700A56670 /* ListScreen */,
 			);
@@ -275,10 +323,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC9DE1522C0B36300A56670 /* ListImageCell.xib in Resources */,
+				FD2F69FA22C0D618003FD42D /* Localizable.strings in Resources */,
 				FDC9DDE322C0A07C00A56670 /* LaunchScreen.storyboard in Resources */,
 				FDC9DDE022C0A07C00A56670 /* Assets.xcassets in Resources */,
 				FDC9DE0A22C0B26600A56670 /* List.storyboard in Resources */,
 				FDC9DDDE22C0A07B00A56670 /* Main.storyboard in Resources */,
+				FD2F6A0422C0D6F5003FD42D /* Unsplash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,10 +381,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2F69FF22C0D649003FD42D /* UIApplication+Extensions.swift in Sources */,
 				FD2F69F222C0D3EA003FD42D /* AssetURLs.swift in Sources */,
+				FD2F6A0622C0D708003FD42D /* UnsplashViewController.swift in Sources */,
 				FDC9DDDB22C0A07B00A56670 /* ViewController.swift in Sources */,
 				FDC9DE1422C0B36300A56670 /* ListImageCell.swift in Sources */,
+				FD2F69F622C0D5EA003FD42D /* APIError.swift in Sources */,
 				FD2F69ED22C0D1FF003FD42D /* User.swift in Sources */,
+				FD2F6A0122C0D6CE003FD42D /* Result.swift in Sources */,
+				FD2F6A0822C0D82E003FD42D /* String+Extensions.swift in Sources */,
+				FD2F69F422C0D53F003FD42D /* HTTPOperationManager.swift in Sources */,
 				FD2F69EA22C0D1BB003FD42D /* Asset.swift in Sources */,
 				FD2F69F022C0D25C003FD42D /* Decoder.swift in Sources */,
 				FDC9DDD922C0A07B00A56670 /* AppDelegate.swift in Sources */,
@@ -345,6 +401,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FD2F69FC22C0D618003FD42D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD2F69FB22C0D618003FD42D /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FDC9DDDC22C0A07B00A56670 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
