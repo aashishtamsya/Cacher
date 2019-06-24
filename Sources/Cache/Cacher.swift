@@ -34,22 +34,22 @@ extension Cacher: Cache {
 }
 
 extension Cacher: Download {
-  public func download<T>(url: URL, completion: @escaping (T?) -> Void) where T: Cachable {
+  public func download<T>(url: URL, completion: @escaping (T?, CacheType) -> Void) where T: Cachable {
     memoryCache.retrieve(key: url.absoluteString) { (object: Data?) in
       if let data = object {
-        completion(data as? T)
+        completion(data as? T, .memory)
         return
       } else {
         URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
           guard let strongSelf = self else {
-            completion(nil)
+            completion(nil, .none)
             return
           }
           if let data = data {
             strongSelf.memoryCache.store(key: url.absoluteString, object: data, completion: nil)
-            completion(data as? T)
+            completion(data as? T, .none)
           } else {
-            completion(nil)
+            completion(nil, .none)
           }
           }.resume()
       }

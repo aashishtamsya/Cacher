@@ -17,7 +17,7 @@ final class NetworkTests: XCTestCase {
     }
     let expectation = self.expectation(description: "Download and cache image")
     let cache = Cacher.sharedCache
-    cache.download(url: imageURL) { (object: Data?) in
+    cache.download(url: imageURL) { (object: Data?, _)  in
       cache.retrieve(key: imageURL.absoluteString, completion: { (data: Data?) in
         if let data = data {
           let image = UIImage(data: data)
@@ -40,7 +40,7 @@ final class NetworkTests: XCTestCase {
       let cache = Cacher.sharedCache
       let expectation = self.expectation(description: "Downloading image and cache it.")
       startMeasuring()
-      cache.download(url: url) { (object: Data?) in
+      cache.download(url: url) { (object: Data?, _) in
         cache.memoryCache.retrieve(key: url.absoluteString, completion: { (data: Data?) in
           if let data = data {
             let image = UIImage(data: data)

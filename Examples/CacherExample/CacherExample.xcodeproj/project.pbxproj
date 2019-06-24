@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2F69DD22C0CE31003FD42D /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2F69DC22C0CE31003FD42D /* Cacher.framework */; };
+		FD2F69DE22C0CE36003FD42D /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2F69DC22C0CE31003FD42D /* Cacher.framework */; };
+		FD2F69DF22C0CE36003FD42D /* Cacher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD2F69DC22C0CE31003FD42D /* Cacher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC9DDD922C0A07B00A56670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDD822C0A07B00A56670 /* AppDelegate.swift */; };
 		FDC9DDDB22C0A07B00A56670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDDA22C0A07B00A56670 /* ViewController.swift */; };
 		FDC9DDDE22C0A07B00A56670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DDDC22C0A07B00A56670 /* Main.storyboard */; };
 		FDC9DDE022C0A07C00A56670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DDDF22C0A07C00A56670 /* Assets.xcassets */; };
 		FDC9DDE322C0A07C00A56670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DDE122C0A07C00A56670 /* LaunchScreen.storyboard */; };
-		FDC9DE0522C0B1A000A56670 /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC9DE0422C0B1A000A56670 /* Cacher.framework */; };
-		FDC9DE0622C0B1A700A56670 /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC9DE0422C0B1A000A56670 /* Cacher.framework */; };
-		FDC9DE0722C0B1A700A56670 /* Cacher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDC9DE0422C0B1A000A56670 /* Cacher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC9DE0A22C0B26600A56670 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DE0922C0B26600A56670 /* List.storyboard */; };
 		FDC9DE0C22C0B27A00A56670 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DE0B22C0B27A00A56670 /* ListViewController.swift */; };
 		FDC9DE1422C0B36300A56670 /* ListImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DE1222C0B36300A56670 /* ListImageCell.swift */; };
@@ -28,7 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FDC9DE0722C0B1A700A56670 /* Cacher.framework in Embed Frameworks */,
+				FD2F69DF22C0CE36003FD42D /* Cacher.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD2F69DC22C0CE31003FD42D /* Cacher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cacher.framework; sourceTree = "<group>"; };
 		FDC9DDD522C0A07B00A56670 /* CacherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CacherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC9DDD822C0A07B00A56670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC9DDDA22C0A07B00A56670 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		FDC9DDDF22C0A07C00A56670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDC9DDE222C0A07C00A56670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDC9DDE422C0A07C00A56670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDC9DE0422C0B1A000A56670 /* Cacher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cacher.framework; sourceTree = "<group>"; };
 		FDC9DE0922C0B26600A56670 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		FDC9DE0B22C0B27A00A56670 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FDC9DE1222C0B36300A56670 /* ListImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImageCell.swift; sourceTree = "<group>"; };
@@ -55,8 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDC9DE0622C0B1A700A56670 /* Cacher.framework in Frameworks */,
-				FDC9DE0522C0B1A000A56670 /* Cacher.framework in Frameworks */,
+				FD2F69DE22C0CE36003FD42D /* Cacher.framework in Frameworks */,
+				FD2F69DD22C0CE31003FD42D /* Cacher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +66,7 @@
 		FDC9DDCC22C0A07B00A56670 = {
 			isa = PBXGroup;
 			children = (
-				FDC9DE0422C0B1A000A56670 /* Cacher.framework */,
+				FD2F69DC22C0CE31003FD42D /* Cacher.framework */,
 				FDC9DDD722C0A07B00A56670 /* CacherExample */,
 				FDC9DDD622C0A07B00A56670 /* Products */,
 			);

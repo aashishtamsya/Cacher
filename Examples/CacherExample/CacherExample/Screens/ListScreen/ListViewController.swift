@@ -30,8 +30,8 @@ final class ListViewController: UIViewController {
     URL(string: "https://images.unsplash.com/photo-1561318160-2273fd6f2924?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
     URL(string: "https://images.unsplash.com/photo-1561282218-953afa0068e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
     URL(string: "https://images.unsplash.com/photo-1561254293-61222d29be71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
-    URL(string: "https://images.unsplash.com/photo-1561252691-db1e375b4868?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
-      ].compactMap( { return $0 })
+    URL(string: "https://images.unsplash.com/photo-1561252691-db1e375b4868?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+      ].compactMap({ return $0 })
   }
 }
 

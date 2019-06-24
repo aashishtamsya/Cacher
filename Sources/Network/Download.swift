@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol Download {
-  func download<T: Cachable>(url: URL, completion: @escaping (_ object: T?) -> Void)
+  func download<T: Cachable>(url: URL, completion: @escaping (_ object: T?, _ cacheType: CacheType) -> Void)
 }
