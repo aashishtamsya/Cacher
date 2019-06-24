@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2F69AA22C0C387003FD42D /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69A922C0C387003FD42D /* UIImageView+Extensions.swift */; };
+		FD2F69AD22C0C41A003FD42D /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69AC22C0C41A003FD42D /* ImageTransition.swift */; };
+		FD2F69B022C0C5F0003FD42D /* UIImageViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69AF22C0C5F0003FD42D /* UIImageViewExtensionTests.swift */; };
+		FD2F69D722C0CCE4003FD42D /* CacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69D522C0CBB8003FD42D /* CacheType.swift */; };
 		FDC9DDBD22C0980A00A56670 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDBC22C0980A00A56670 /* Cache.swift */; };
 		FDC9DDBF22C0985000A56670 /* Cachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDBE22C0985000A56670 /* Cachable.swift */; };
 		FDC9DDC122C098E400A56670 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDC022C098E400A56670 /* MemoryCache.swift */; };
@@ -32,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD2F69A922C0C387003FD42D /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		FD2F69AC22C0C41A003FD42D /* ImageTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
+		FD2F69AF22C0C5F0003FD42D /* UIImageViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensionTests.swift; sourceTree = "<group>"; };
+		FD2F69D522C0CBB8003FD42D /* CacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheType.swift; sourceTree = "<group>"; };
 		FDC9DDBC22C0980A00A56670 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		FDC9DDBE22C0985000A56670 /* Cachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
 		FDC9DDC022C098E400A56670 /* MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
@@ -68,6 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD2F69AB22C0C408003FD42D /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F69AC22C0C41A003FD42D /* ImageTransition.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		FD2F69AE22C0C5DA003FD42D /* ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F69AF22C0C5F0003FD42D /* UIImageViewExtensionTests.swift */,
+			);
+			path = ExtensionTests;
+			sourceTree = "<group>";
+		};
 		FDC9DDC222C098E700A56670 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +99,7 @@
 				FDC9DDC022C098E400A56670 /* MemoryCache.swift */,
 				FDC9DDBE22C0985000A56670 /* Cachable.swift */,
 				FDC9DDC322C099EE00A56670 /* Cacher.swift */,
+				FD2F69D522C0CBB8003FD42D /* CacheType.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -100,6 +125,7 @@
 			children = (
 				FDC9DDFA22C0A61500A56670 /* Data+Cache.swift */,
 				FDC9DDCA22C09D4D00A56670 /* UIImage+Cache.swift */,
+				FD2F69A922C0C387003FD42D /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -118,6 +144,7 @@
 				FDD7DE6D22BE0B680016639A /* Info.plist */,
 				FDD7DE6B22BE0B680016639A /* CacherTests.swift */,
 				FDC9DDC722C09B8500A56670 /* CacheTests */,
+				FD2F69AE22C0C5DA003FD42D /* ExtensionTests */,
 				FDC9DE0122C0B01200A56670 /* NetworkTests */,
 			);
 			path = CacherTests;
@@ -144,6 +171,7 @@
 		FDFE6C0022BD32E4008699C9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FD2F69AB22C0C408003FD42D /* Image */,
 				FDFE6C0122BD32E4008699C9 /* Cacher.h */,
 				FDC9DDFF22C0AFCE00A56670 /* Extensions */,
 				FDC9DDF322C0A3E700A56670 /* Network */,
@@ -229,6 +257,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = FDFE6BF422BD32E4008699C9;
 			productRefGroup = FDFE6BFF22BD32E4008699C9 /* Products */;
@@ -286,6 +315,7 @@
 			files = (
 				FDC9DE0322C0B02D00A56670 /* NetworkTests.swift in Sources */,
 				FDC9DDC922C09B9700A56670 /* CacheTests.swift in Sources */,
+				FD2F69B022C0C5F0003FD42D /* UIImageViewExtensionTests.swift in Sources */,
 				FDD7DE6C22BE0B680016639A /* CacherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,11 +325,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC9DDC122C098E400A56670 /* MemoryCache.swift in Sources */,
+				FD2F69AD22C0C41A003FD42D /* ImageTransition.swift in Sources */,
+				FD2F69D722C0CCE4003FD42D /* CacheType.swift in Sources */,
 				FDC9DDC422C099EE00A56670 /* Cacher.swift in Sources */,
 				FDC9DDBF22C0985000A56670 /* Cachable.swift in Sources */,
 				FDC9DDFB22C0A61500A56670 /* Data+Cache.swift in Sources */,
 				FDC9DDBD22C0980A00A56670 /* Cache.swift in Sources */,
 				FDC9DDF722C0A40A00A56670 /* Download.swift in Sources */,
+				FD2F69AA22C0C387003FD42D /* UIImageView+Extensions.swift in Sources */,
 				FDC9DDCB22C09D4D00A56670 /* UIImage+Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

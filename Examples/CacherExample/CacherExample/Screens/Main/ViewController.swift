@@ -13,7 +13,6 @@ final class ViewController: UIViewController {
   @IBOutlet fileprivate weak var imageView: UIImageView!
   @IBOutlet fileprivate weak var downloadImageView: UIImageView!
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     loadImageFromCache()
@@ -38,7 +37,7 @@ private extension ViewController {
   
   func loadImage(fromURL url: URL) {
     let cache = Cacher.sharedCache
-    cache.download(url: url) { [weak self] (object: Data?) in
+    cache.download(url: url) { [weak self] (object: Data?, _) in
       if let data = object, let image = UIImage(data: data) {
         DispatchQueue.main.async {
           self?.downloadImageView.image = image

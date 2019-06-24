@@ -12,17 +12,10 @@ import Cacher
 final class ListImageCell: UITableViewCell {
   @IBOutlet fileprivate weak var remoteImageView: UIImageView!
   
-  
   func bind(_ url: URL?) {
     guard let url = url else { return }
-    let cache = Cacher.sharedCache
-    cache.download(url: url) { [weak self] (object: Data?) in
-      if let data = object, let image = UIImage(data: data) {
-        DispatchQueue.main.async {
-          self?.remoteImageView.image = image
-        }
-      }
-    }
+    remoteImageView.loadImage(withURL: url, placeholder: #imageLiteral(resourceName: "bg_placeholder"), transition: .fade(0.5), completion: { _ in
+    })
   }
     
 }
