@@ -1,5 +1,5 @@
 //
-//  Cacher.swift
+//  Downloader.swift
 //  Cacher
 //
 //  Created by Aashish Tamsya on 24/06/19.
@@ -8,32 +8,13 @@
 
 import Foundation
 
-public class Cacher {
-  public static let sharedCache = Cacher()
-  
+public class Downloader {
+  public static let shared = Downloader()
   let memoryCache = MemoryCache()
   
 }
 
-extension Cacher: Cache {
-  public func store<T>(key: String, object: T, completion: (() -> Void)?) where T: Cachable {
-    memoryCache.store(key: key, object: object, completion: nil)
-  }
-  
-  public func retrieve<T>(key: String, completion: @escaping (T?) -> Void) where T: Cachable {
-    memoryCache.retrieve(key: key) { (object: T?) in
-      if let object = object {
-        completion(object)
-        return
-      } else {
-        completion(nil)
-        return
-      }
-    }
-  }
-}
-
-extension Cacher: Download {
+extension Downloader: Download {
   public func download<T>(url: URL, completion: @escaping (T?) -> Void) where T: Cachable {
     memoryCache.retrieve(key: url.absoluteString) { (object: Data?) in
       if let data = object {
