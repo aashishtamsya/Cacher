@@ -3,13 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37A9126B9340836E039D933E /* Pods_CacherExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC49666D4661D92980E76 /* Pods_CacherExample.framework */; };
 		FD2F69DD22C0CE31003FD42D /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2F69DC22C0CE31003FD42D /* Cacher.framework */; };
 		FD2F69DE22C0CE36003FD42D /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2F69DC22C0CE31003FD42D /* Cacher.framework */; };
 		FD2F69DF22C0CE36003FD42D /* Cacher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD2F69DC22C0CE31003FD42D /* Cacher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD2F69EA22C0D1BB003FD42D /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69E922C0D1BB003FD42D /* Asset.swift */; };
+		FD2F69ED22C0D1FF003FD42D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69EC22C0D1FF003FD42D /* User.swift */; };
+		FD2F69F022C0D25C003FD42D /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69EF22C0D25C003FD42D /* Decoder.swift */; };
+		FD2F69F222C0D3EA003FD42D /* AssetURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69F122C0D3EA003FD42D /* AssetURLs.swift */; };
 		FDC9DDD922C0A07B00A56670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDD822C0A07B00A56670 /* AppDelegate.swift */; };
 		FDC9DDDB22C0A07B00A56670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDDA22C0A07B00A56670 /* ViewController.swift */; };
 		FDC9DDDE22C0A07B00A56670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DDDC22C0A07B00A56670 /* Main.storyboard */; };
@@ -36,7 +41,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4013543FD2984A468DFD7F6A /* Pods-CacherExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExample.release.xcconfig"; path = "Target Support Files/Pods-CacherExample/Pods-CacherExample.release.xcconfig"; sourceTree = "<group>"; };
+		7DDEC49666D4661D92980E76 /* Pods_CacherExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CacherExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4CA6E94CCB6CCBF6C6E7E65 /* Pods-CacherExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExample.debug.xcconfig"; path = "Target Support Files/Pods-CacherExample/Pods-CacherExample.debug.xcconfig"; sourceTree = "<group>"; };
 		FD2F69DC22C0CE31003FD42D /* Cacher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cacher.framework; sourceTree = "<group>"; };
+		FD2F69E922C0D1BB003FD42D /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		FD2F69EC22C0D1FF003FD42D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FD2F69EF22C0D25C003FD42D /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		FD2F69F122C0D3EA003FD42D /* AssetURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetURLs.swift; sourceTree = "<group>"; };
 		FDC9DDD522C0A07B00A56670 /* CacherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CacherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC9DDD822C0A07B00A56670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC9DDDA22C0A07B00A56670 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,18 +69,73 @@
 			files = (
 				FD2F69DE22C0CE36003FD42D /* Cacher.framework in Frameworks */,
 				FD2F69DD22C0CE31003FD42D /* Cacher.framework in Frameworks */,
+				37A9126B9340836E039D933E /* Pods_CacherExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7CECB6C17015457CA18B22A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4CA6E94CCB6CCBF6C6E7E65 /* Pods-CacherExample.debug.xcconfig */,
+				4013543FD2984A468DFD7F6A /* Pods-CacherExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A012DC33030CEDB05E611139 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DDEC49666D4661D92980E76 /* Pods_CacherExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD2F69E622C0D18E003FD42D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F69EE22C0D252003FD42D /* Shared */,
+				FD2F69E822C0D1B3003FD42D /* Model */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FD2F69E722C0D198003FD42D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FDC9DE0D22C0B32000A56670 /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FD2F69E822C0D1B3003FD42D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F69E922C0D1BB003FD42D /* Asset.swift */,
+				FD2F69F122C0D3EA003FD42D /* AssetURLs.swift */,
+				FD2F69EC22C0D1FF003FD42D /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD2F69EE22C0D252003FD42D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F69EF22C0D25C003FD42D /* Decoder.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		FDC9DDCC22C0A07B00A56670 = {
 			isa = PBXGroup;
 			children = (
 				FD2F69DC22C0CE31003FD42D /* Cacher.framework */,
 				FDC9DDD722C0A07B00A56670 /* CacherExample */,
 				FDC9DDD622C0A07B00A56670 /* Products */,
+				7CECB6C17015457CA18B22A3 /* Pods */,
+				A012DC33030CEDB05E611139 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,12 +150,13 @@
 		FDC9DDD722C0A07B00A56670 /* CacherExample */ = {
 			isa = PBXGroup;
 			children = (
-				FDC9DE0E22C0B32400A56670 /* Screens */,
-				FDC9DE0D22C0B32000A56670 /* Views */,
 				FDC9DDD822C0A07B00A56670 /* AppDelegate.swift */,
+				FD2F69E622C0D18E003FD42D /* Network */,
+				FDC9DE0E22C0B32400A56670 /* Screens */,
+				FD2F69E722C0D198003FD42D /* Shared */,
+				FDC9DDE422C0A07C00A56670 /* Info.plist */,
 				FDC9DDDF22C0A07C00A56670 /* Assets.xcassets */,
 				FDC9DDE122C0A07C00A56670 /* LaunchScreen.storyboard */,
-				FDC9DDE422C0A07C00A56670 /* Info.plist */,
 			);
 			path = CacherExample;
 			sourceTree = "<group>";
@@ -152,10 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDC9DDE722C0A07C00A56670 /* Build configuration list for PBXNativeTarget "CacherExample" */;
 			buildPhases = (
+				BDBEC5B3517B276ABFB79A10 /* [CP] Check Pods Manifest.lock */,
 				FDC9DDD122C0A07B00A56670 /* Sources */,
 				FDC9DDD222C0A07B00A56670 /* Frameworks */,
 				FDC9DDD322C0A07B00A56670 /* Resources */,
 				FDC9DDEE22C0A0A100A56670 /* Embed Frameworks */,
+				FC139E7117EA825A32402132 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,13 +284,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BDBEC5B3517B276ABFB79A10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CacherExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC139E7117EA825A32402132 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CacherExample/Pods-CacherExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CacherExample/Pods-CacherExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CacherExample/Pods-CacherExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDC9DDD122C0A07B00A56670 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2F69F222C0D3EA003FD42D /* AssetURLs.swift in Sources */,
 				FDC9DDDB22C0A07B00A56670 /* ViewController.swift in Sources */,
 				FDC9DE1422C0B36300A56670 /* ListImageCell.swift in Sources */,
+				FD2F69ED22C0D1FF003FD42D /* User.swift in Sources */,
+				FD2F69EA22C0D1BB003FD42D /* Asset.swift in Sources */,
+				FD2F69F022C0D25C003FD42D /* Decoder.swift in Sources */,
 				FDC9DDD922C0A07B00A56670 /* AppDelegate.swift in Sources */,
 				FDC9DE0C22C0B27A00A56670 /* ListViewController.swift in Sources */,
 			);
@@ -366,6 +482,7 @@
 		};
 		FDC9DDE822C0A07C00A56670 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4CA6E94CCB6CCBF6C6E7E65 /* Pods-CacherExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -388,6 +505,7 @@
 		};
 		FDC9DDE922C0A07C00A56670 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4013543FD2984A468DFD7F6A /* Pods-CacherExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
