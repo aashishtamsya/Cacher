@@ -11,7 +11,7 @@ import XCTest
 
 final class NetworkTests: XCTestCase {
   func testDownloadable() {
-    guard let imageURL = URL(string: "https://static.addtoany.com/images/dracaena-cinnabari.jpg") else {
+    guard let imageURL = URL(string: "https://blog.hubspot.com/hubfs/image8-2.jpg") else {
       XCTAssert(false, "no image at url")
       return
     }

@@ -26,17 +26,23 @@
                                     <outlet property="delegate" destination="McY-QL-dO0" id="dbV-KU-Vm7"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FZq-ja-QLc">
+                                <rect key="frame" x="0.0" y="438" width="414" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cv0-TE-UEv" firstAttribute="leading" secondItem="Qhc-Lb-GEM" secondAttribute="leading" id="1YZ-Il-wfg"/>
                             <constraint firstItem="cv0-TE-UEv" firstAttribute="top" secondItem="Qhc-Lb-GEM" secondAttribute="top" id="IVA-Yx-KhF"/>
                             <constraint firstItem="Qhc-Lb-GEM" firstAttribute="trailing" secondItem="cv0-TE-UEv" secondAttribute="trailing" id="LHg-r7-PIf"/>
+                            <constraint firstItem="FZq-ja-QLc" firstAttribute="centerY" secondItem="Qhc-Lb-GEM" secondAttribute="centerY" id="SCp-XC-Gj6"/>
                             <constraint firstItem="Qhc-Lb-GEM" firstAttribute="bottom" secondItem="cv0-TE-UEv" secondAttribute="bottom" id="xyY-Yc-jWM"/>
+                            <constraint firstItem="FZq-ja-QLc" firstAttribute="centerX" secondItem="Qhc-Lb-GEM" secondAttribute="centerX" id="z4w-lg-Ewy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qhc-Lb-GEM"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="FZq-ja-QLc" id="JEo-en-NQN"/>
                         <outlet property="tableView" destination="cv0-TE-UEv" id="tsU-GC-bvO"/>
                     </connections>
                 </viewController>

@@ -27,6 +27,9 @@
 		FD2F6A0B22C0DAFD003FD42D /* UnsplashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A0A22C0DAFD003FD42D /* UnsplashManager.swift */; };
 		FD2F6A1322C0DD82003FD42D /* CacherExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A1222C0DD82003FD42D /* CacherExampleTests.swift */; };
 		FD2F6A1C22C0DD98003FD42D /* ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A1B22C0DD98003FD42D /* ManagerTests.swift */; };
+		FD2F6A2022C0DF2E003FD42D /* PresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A1F22C0DF2E003FD42D /* PresenterState.swift */; };
+		FD2F6A2222C0DF6C003FD42D /* UnsplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A2122C0DF6C003FD42D /* UnsplashPresenter.swift */; };
+		FD2F6A2522C0DFE3003FD42D /* PresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F6A2422C0DFE3003FD42D /* PresenterTests.swift */; };
 		FDC9DDD922C0A07B00A56670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDD822C0A07B00A56670 /* AppDelegate.swift */; };
 		FDC9DDDB22C0A07B00A56670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDDA22C0A07B00A56670 /* ViewController.swift */; };
 		FDC9DDDE22C0A07B00A56670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DDDC22C0A07B00A56670 /* Main.storyboard */; };
@@ -87,6 +90,9 @@
 		FD2F6A1222C0DD82003FD42D /* CacherExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacherExampleTests.swift; sourceTree = "<group>"; };
 		FD2F6A1422C0DD82003FD42D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD2F6A1B22C0DD98003FD42D /* ManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerTests.swift; sourceTree = "<group>"; };
+		FD2F6A1F22C0DF2E003FD42D /* PresenterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterState.swift; sourceTree = "<group>"; };
+		FD2F6A2122C0DF6C003FD42D /* UnsplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPresenter.swift; sourceTree = "<group>"; };
+		FD2F6A2422C0DFE3003FD42D /* PresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterTests.swift; sourceTree = "<group>"; };
 		FDC9DDD522C0A07B00A56670 /* CacherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CacherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC9DDD822C0A07B00A56670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC9DDDA22C0A07B00A56670 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,8 +151,8 @@
 		FD2F69E622C0D18E003FD42D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FD2F6A0922C0DAEE003FD42D /* Manager */,
-				FD2F69E822C0D1B3003FD42D /* Model */,
+				FD2F6A1D22C0DF0C003FD42D /* API */,
+				FD2F6A1E22C0DF1D003FD42D /* Presenter */,
 				FD2F69EE22C0D252003FD42D /* Shared */,
 			);
 			path = Network;
@@ -179,6 +185,7 @@
 				FD2F69F322C0D53F003FD42D /* HTTPOperationManager.swift */,
 				FD2F69F522C0D5EA003FD42D /* APIError.swift */,
 				FD2F6A0022C0D6CE003FD42D /* Result.swift */,
+				FD2F6A1F22C0DF2E003FD42D /* PresenterState.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -220,9 +227,10 @@
 		FD2F6A1122C0DD82003FD42D /* CacherExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				FD2F6A1422C0DD82003FD42D /* Info.plist */,
 				FD2F6A1222C0DD82003FD42D /* CacherExampleTests.swift */,
 				FD2F6A1A22C0DD87003FD42D /* ManagerTests */,
-				FD2F6A1422C0DD82003FD42D /* Info.plist */,
+				FD2F6A2322C0DFD2003FD42D /* PresenterTests */,
 			);
 			path = CacherExampleTests;
 			sourceTree = "<group>";
@@ -233,6 +241,31 @@
 				FD2F6A1B22C0DD98003FD42D /* ManagerTests.swift */,
 			);
 			path = ManagerTests;
+			sourceTree = "<group>";
+		};
+		FD2F6A1D22C0DF0C003FD42D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F6A0922C0DAEE003FD42D /* Manager */,
+				FD2F69E822C0D1B3003FD42D /* Model */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FD2F6A1E22C0DF1D003FD42D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F6A2122C0DF6C003FD42D /* UnsplashPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FD2F6A2322C0DFD2003FD42D /* PresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F6A2422C0DFE3003FD42D /* PresenterTests.swift */,
+			);
+			path = PresenterTests;
 			sourceTree = "<group>";
 		};
 		FDC9DDCC22C0A07B00A56670 = {
@@ -516,6 +549,7 @@
 			files = (
 				FD2F6A1322C0DD82003FD42D /* CacherExampleTests.swift in Sources */,
 				FD2F6A1C22C0DD98003FD42D /* ManagerTests.swift in Sources */,
+				FD2F6A2522C0DFE3003FD42D /* PresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +565,8 @@
 				FD2F69F622C0D5EA003FD42D /* APIError.swift in Sources */,
 				FD2F69ED22C0D1FF003FD42D /* User.swift in Sources */,
 				FD2F6A0122C0D6CE003FD42D /* Result.swift in Sources */,
+				FD2F6A2022C0DF2E003FD42D /* PresenterState.swift in Sources */,
+				FD2F6A2222C0DF6C003FD42D /* UnsplashPresenter.swift in Sources */,
 				FD2F6A0822C0D82E003FD42D /* String+Extensions.swift in Sources */,
 				FD2F69F422C0D53F003FD42D /* HTTPOperationManager.swift in Sources */,
 				FD2F6A0B22C0DAFD003FD42D /* UnsplashManager.swift in Sources */,
