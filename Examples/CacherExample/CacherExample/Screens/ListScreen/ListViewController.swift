@@ -46,3 +46,10 @@ extension ListViewController: UITableViewDataSource {
     return cell
   }
 }
+
+extension ListViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    guard let cell = tableView.cellForRow(at: indexPath) as? ListImageCell else { return }
+    cell.cancelLoading()
+  }
+}

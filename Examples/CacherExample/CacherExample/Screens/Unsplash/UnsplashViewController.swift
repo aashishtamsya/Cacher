@@ -33,8 +33,14 @@ extension UnsplashViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ListImageCell") as! ListImageCell
-    cell.bind(dataSource?[indexPath.row].urls?.rawURL)
+    cell.bind(dataSource?[indexPath.row].urls?.fullURL)
     return cell
+  }
+}
+extension UnsplashViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    guard let cell = tableView.cellForRow(at: indexPath) as? ListImageCell else { return }
+    cell.cancelLoading()
   }
 }
 // MARK: - Private Methods
