@@ -9,34 +9,35 @@
 import Foundation
 
 extension UIImageView {
-  public func loadImage(withURL url: URL, placeholder: UIImage? = nil, transition: ImageTransition? = .none, completion: @escaping (UIImage?) -> Void) {
+  public func loadImage(withURL url: URL, placeholder: UIImage? = nil, transition: ImageTransition? = .none, completion: ((UIImage?) -> Void)? = nil) -> RequestToken? {
     let cache = Cacher.sharedCache
-    cache.download(url: url) { (object: Data?, cacheType: CacheType) in
+    let token = cache.download(url: url) { (object: Data?, cacheType: CacheType) in
       if let data = object, let image = UIImage(data: data) {
         guard self.requiresTransition(transition: transition ?? .none, cacheType: cacheType) else {
           DispatchQueue.main.async {
             self.image = image
-            completion(image)
+            completion?(image)
           }
           return
         }
         if let transition = transition {
           self.performTransition(image: image, transition: transition, done: {
-            completion(image)
+            completion?(image)
           })
         } else {
           DispatchQueue.main.async {
             self.image = image
-            completion(image)
+            completion?(image)
           }
         }
       } else {
         DispatchQueue.main.async {
           self.image = placeholder
-          completion(nil)
+          completion?(nil)
         }
       }
     }
+    return token
   }
   
   private func requiresTransition(transition: ImageTransition, cacheType: CacheType) -> Bool {
@@ -61,7 +62,7 @@ extension UIImageView {
     })
   }
   
-  public func cancelImageLoading(_ url: URL) {
-    Cacher.sharedCache.cancel(url: url)
+  public func cancelImageLoading(_ url: URL, cancelToken: RequestToken? = nil) {
+    Cacher.sharedCache.cancel(url, token: cancelToken)
   }
 }

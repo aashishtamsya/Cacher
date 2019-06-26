@@ -40,7 +40,7 @@ private extension ViewController {
   @IBAction func downloadButtonSelected(_ sender: UIButton) {
     guard let url = URL(string: "https://cdn.pixabay.com/photo/2018/06/11/17/02/flower-3468846_960_720.jpg") else { return }
     downloadActivityIndicator.startAnimating()
-    downloadImageView.loadImage(withURL: url, transition: .fade(0.5)) { [weak self] _ in
+    _ = downloadImageView.loadImage(withURL: url, transition: .fade(0.5)) { [weak self] _ in
       DispatchQueue.main.async {
         self?.downloadActivityIndicator.stopAnimating()
       }
@@ -59,5 +59,8 @@ private extension ViewController {
   
   @IBAction func unsplashButtonSelected(_ sender: UIButton) {
     navigationController?.pushViewController(UnsplashViewController.unsplashViewController(), animated: true)
+  }
+  @IBAction func multipleImageButtonSelected(_ sender: UIButton) {
+    navigationController?.pushViewController(MultipleImageViewController.MultipleImageViewController(), animated: true)
   }
 }
