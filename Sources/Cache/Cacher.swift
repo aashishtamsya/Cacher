@@ -13,7 +13,7 @@ private var taskPool: [URLSessionDataTask: URL] = [:]
 public class Cacher {
   public static let sharedCache = Cacher()
   
-  private let memoryCache = MemoryCache()
+  let memoryCache = MemoryCache()
   private var session: URLSession
   
   init() {
