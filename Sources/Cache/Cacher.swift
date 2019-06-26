@@ -22,6 +22,10 @@ public class Cacher {
 }
 
 extension Cacher: Cache {
+  public func removeAll() {
+    memoryCache.removeAll()
+  }
+  
   public func store<T>(key: String, object: T, completion: (() -> Void)?) where T: Cachable {
     memoryCache.store(key: key, object: object, completion: nil)
   }
@@ -73,4 +77,3 @@ extension Cacher: Download {
     taskPool.removeValue(forKey: cancelToken)
   }
 }
-

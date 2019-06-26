@@ -12,4 +12,6 @@ public protocol Cache {
   func store<T: Cachable>(key: String, object: T, completion: (() -> Void)?)
   
   func retrieve<T: Cachable>(key: String, completion: @escaping (_ object: T?) -> Void)
+  
+  func removeAll()
 }
