@@ -12,7 +12,7 @@ final class UnsplashViewController: UIViewController {
   @IBOutlet fileprivate weak var tableView: UITableView!
   @IBOutlet fileprivate weak var activityIndicator: UIActivityIndicatorView!
   
-  fileprivate var dataSource: [Asset]?
+  fileprivate var dataSource: [Photo]?
   
   static func unsplashViewController() -> UnsplashViewController {
     return UIStoryboard(name: "Unsplash", bundle: nil).instantiateViewController(withIdentifier: "UnsplashViewController") as! UnsplashViewController
@@ -21,7 +21,7 @@ final class UnsplashViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationItem.title = "UnsplashTitle".localized
-    tableView.register(UINib(nibName: "ListImageCell", bundle: nil), forCellReuseIdentifier: "ListImageCell")
+    tableView.register(UINib(nibName: "PhotoCell", bundle: nil), forCellReuseIdentifier: "PhotoCell")
     fetchImages()
   }
 }
@@ -32,15 +32,15 @@ extension UnsplashViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "ListImageCell") as! ListImageCell
-    cell.bind(dataSource?[indexPath.row].urls?.fullURL)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell") as! PhotoCell
+    cell.bind(dataSource?[indexPath.row])
     return cell
   }
 }
 extension UnsplashViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    guard let cell = tableView.cellForRow(at: indexPath) as? ListImageCell else { return }
-    cell.cancelLoading()
+    guard let cell = tableView.cellForRow(at: indexPath) as? PhotoCell else { return }
+    cell.cancelImageLoading()
   }
 }
 // MARK: - Private Methods

@@ -99,20 +99,38 @@
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SgZ-W9-rmD">
+                                <rect key="frame" x="143" y="201.66666666666666" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9RE-9J-Ecr">
+                                <rect key="frame" x="143" y="441" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2Ep-gE-GU6">
+                                <rect key="frame" x="143" y="680.33333333333337" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9RE-9J-Ecr" firstAttribute="centerY" secondItem="1Nh-ex-sVE" secondAttribute="centerY" id="9Oo-Pv-bpw"/>
+                            <constraint firstItem="9RE-9J-Ecr" firstAttribute="centerX" secondItem="1Nh-ex-sVE" secondAttribute="centerX" id="9lJ-9V-xUS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NAD-Bv-KAQ" secondAttribute="trailing" id="G5q-o1-oKm"/>
                             <constraint firstItem="NAD-Bv-KAQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GFn-s2-Ri4"/>
+                            <constraint firstItem="2Ep-gE-GU6" firstAttribute="centerY" secondItem="K14-Tx-xg3" secondAttribute="centerY" id="RIt-qm-Cur"/>
+                            <constraint firstItem="2Ep-gE-GU6" firstAttribute="centerX" secondItem="K14-Tx-xg3" secondAttribute="centerX" id="UUZ-aJ-vCN"/>
                             <constraint firstItem="NAD-Bv-KAQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jhN-ei-0lp"/>
                             <constraint firstItem="NAD-Bv-KAQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="keb-y6-4Bu"/>
+                            <constraint firstItem="SgZ-W9-rmD" firstAttribute="centerY" secondItem="aSX-4I-ihN" secondAttribute="centerY" id="qHm-Qe-IQW"/>
+                            <constraint firstItem="SgZ-W9-rmD" firstAttribute="centerX" secondItem="aSX-4I-ihN" secondAttribute="centerX" id="qh1-mw-JYI"/>
                             <constraint firstItem="NAD-Bv-KAQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yam-oN-1wg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="nJv-b8-vyH"/>
                     <connections>
+                        <outlet property="firstActivityIndicator" destination="SgZ-W9-rmD" id="9ov-5W-xy3"/>
                         <outlet property="oneImageView" destination="aSX-4I-ihN" id="zQV-wX-pBI"/>
+                        <outlet property="secondActivityIndicator" destination="9RE-9J-Ecr" id="Xnz-Jx-fsb"/>
+                        <outlet property="thirdActivityIndicator" destination="2Ep-gE-GU6" id="8AR-i9-J2N"/>
                         <outlet property="threeImageView" destination="K14-Tx-xg3" id="cTE-YR-NwE"/>
                         <outlet property="twoImageView" destination="1Nh-ex-sVE" id="e8S-Ym-Ngf"/>
                     </connections>

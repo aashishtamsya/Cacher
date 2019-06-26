@@ -8,7 +8,7 @@
 
 import Foundation
 
-func getUnsplashImages(_ callback: @escaping (PresenterState<[Asset]>) -> Void) {
+func getUnsplashImages(_ callback: @escaping (PresenterState<[Photo]>) -> Void) {
   callback(.loading)
   retrieveUnsplashImages { result in
     switch result {
@@ -21,7 +21,7 @@ func getUnsplashImages(_ callback: @escaping (PresenterState<[Asset]>) -> Void) 
 }
 
 
-func getUnsplashImagesAsync(_ callback: @escaping (PresenterState<[Asset]>) -> Void) {
+func getUnsplashImagesAsync(_ callback: @escaping (PresenterState<[Photo]>) -> Void) {
   DispatchQueue.global(qos: .background).async {
     DispatchQueue.main.async {
       callback(.loading)
