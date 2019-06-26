@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		37A9126B9340836E039D933E /* Pods_CacherExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC49666D4661D92980E76 /* Pods_CacherExample.framework */; };
 		539690206A7D918CA6F9D6BE /* Pods_CacherExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE4DB622C94F6F51CDB164B /* Pods_CacherExampleTests.framework */; };
+		FD0A1AE322C390D2006FD682 /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1AE222C390D2006FD682 /* Cacher.framework */; };
+		FD0A1AE422C3910E006FD682 /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1AE222C390D2006FD682 /* Cacher.framework */; };
+		FD0A1AE522C3910E006FD682 /* Cacher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1AE222C390D2006FD682 /* Cacher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD2F69EA22C0D1BB003FD42D /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69E922C0D1BB003FD42D /* Asset.swift */; };
 		FD2F69ED22C0D1FF003FD42D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69EC22C0D1FF003FD42D /* User.swift */; };
 		FD2F69F022C0D25C003FD42D /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69EF22C0D25C003FD42D /* Decoder.swift */; };
@@ -38,9 +41,6 @@
 		FDC9DE1522C0B36300A56670 /* ListImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DE1322C0B36300A56670 /* ListImageCell.xib */; };
 		FDDB85CB22C36D58007C797E /* MultipleImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDB85C922C36D58007C797E /* MultipleImage.storyboard */; };
 		FDDB85CC22C36D58007C797E /* MultipleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB85CA22C36D58007C797E /* MultipleImageViewController.swift */; };
-		FDDB85DE22C385B2007C797E /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB85DD22C385B2007C797E /* Cacher.framework */; };
-		FDDB85DF22C385B7007C797E /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB85DD22C385B2007C797E /* Cacher.framework */; };
-		FDDB85E022C385B7007C797E /* Cacher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB85DD22C385B2007C797E /* Cacher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FDDB85E022C385B7007C797E /* Cacher.framework in Embed Frameworks */,
+				FD0A1AE522C3910E006FD682 /* Cacher.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +74,7 @@
 		A4CA6E94CCB6CCBF6C6E7E65 /* Pods-CacherExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExample.debug.xcconfig"; path = "Target Support Files/Pods-CacherExample/Pods-CacherExample.debug.xcconfig"; sourceTree = "<group>"; };
 		AC3D14BC5CD1554C8D96AB49 /* Pods-CacherExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-CacherExampleTests/Pods-CacherExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA0045CC43266F698EC6694E /* Pods-CacherExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExampleTests.release.xcconfig"; path = "Target Support Files/Pods-CacherExampleTests/Pods-CacherExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		FD0A1AE222C390D2006FD682 /* Cacher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cacher.framework; sourceTree = "<group>"; };
 		FD2F69E922C0D1BB003FD42D /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		FD2F69EC22C0D1FF003FD42D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FD2F69EF22C0D25C003FD42D /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
@@ -107,7 +108,6 @@
 		FDC9DE1322C0B36300A56670 /* ListImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListImageCell.xib; sourceTree = "<group>"; };
 		FDDB85C922C36D58007C797E /* MultipleImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MultipleImage.storyboard; sourceTree = "<group>"; };
 		FDDB85CA22C36D58007C797E /* MultipleImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleImageViewController.swift; sourceTree = "<group>"; };
-		FDDB85DD22C385B2007C797E /* Cacher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cacher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +123,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDDB85DE22C385B2007C797E /* Cacher.framework in Frameworks */,
-				FDDB85DF22C385B7007C797E /* Cacher.framework in Frameworks */,
+				FD0A1AE322C390D2006FD682 /* Cacher.framework in Frameworks */,
+				FD0A1AE422C3910E006FD682 /* Cacher.framework in Frameworks */,
 				37A9126B9340836E039D933E /* Pods_CacherExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +275,7 @@
 		FDC9DDCC22C0A07B00A56670 = {
 			isa = PBXGroup;
 			children = (
-				FDDB85DD22C385B2007C797E /* Cacher.framework */,
+				FD0A1AE222C390D2006FD682 /* Cacher.framework */,
 				FDC9DDD722C0A07B00A56670 /* CacherExample */,
 				FD2F6A1122C0DD82003FD42D /* CacherExampleTests */,
 				FDC9DDD622C0A07B00A56670 /* Products */,

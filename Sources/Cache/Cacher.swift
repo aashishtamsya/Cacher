@@ -13,7 +13,7 @@ private var taskPool: [URLSessionDataTask: URL] = [:]
 public class Cacher {
   public static let sharedCache = Cacher()
   
-  let memoryCache = MemoryCache()
+  private let memoryCache = MemoryCache()
   private var session: URLSession
   
   init() {
@@ -22,6 +22,10 @@ public class Cacher {
 }
 
 extension Cacher: Cache {
+  public func removeAll() {
+    memoryCache.removeAll()
+  }
+  
   public func store<T>(key: String, object: T, completion: (() -> Void)?) where T: Cachable {
     memoryCache.store(key: key, object: object, completion: nil)
   }
@@ -73,4 +77,3 @@ extension Cacher: Download {
     taskPool.removeValue(forKey: cancelToken)
   }
 }
-

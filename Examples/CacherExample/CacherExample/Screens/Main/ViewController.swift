@@ -63,4 +63,7 @@ private extension ViewController {
   @IBAction func multipleImageButtonSelected(_ sender: UIButton) {
     navigationController?.pushViewController(MultipleImageViewController.MultipleImageViewController(), animated: true)
   }
+  @IBAction func clearAllCacheButtonSelected(_ sender: UIButton) {
+    Cacher.sharedCache.removeAll()
+  }
 }
