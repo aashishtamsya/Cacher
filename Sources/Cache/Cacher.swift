@@ -8,11 +8,17 @@
 
 import Foundation
 
+private var taskPool: [URL: URLSessionDataTask] = [:]
+
 public class Cacher {
   public static let sharedCache = Cacher()
-  
+
   let memoryCache = MemoryCache()
+  private var session: URLSession
   
+  init() {
+    session = URLSession(configuration: .default)
+  }
 }
 
 extension Cacher: Cache {
@@ -40,19 +46,38 @@ extension Cacher: Download {
         completion(data as? T, .memory)
         return
       } else {
-        URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
+        let task = self.session.dataTask(with: url) { [weak self] data, _, _ in
           guard let strongSelf = self else {
+            taskPool.removeValue(forKey: url)
             completion(nil, .none)
             return
           }
           if let data = data {
             strongSelf.memoryCache.store(key: url.absoluteString, object: data, completion: nil)
+            taskPool.removeValue(forKey: url)
             completion(data as? T, .none)
           } else {
+            taskPool.removeValue(forKey: url)
             completion(nil, .none)
           }
-          }.resume()
+        }
+        taskPool[url] = task
+        task.resume()
       }
+    }
+  }
+  
+  public func cancel(url: URL) {
+    guard let task = taskPool.filter({ $0.key == url }).first?.value else { return }
+    switch task.state {
+    case .canceling, .completed, .suspended:
+      taskPool.removeValue(forKey: url)
+      return
+    case .running:
+      task.cancel()
+      taskPool.removeValue(forKey: url)
+    @unknown default:
+      return
     }
   }
 }

@@ -60,4 +60,8 @@ extension UIImageView {
       }
     })
   }
+  
+  public func cancelImageLoading(_ url: URL) {
+    Cacher.sharedCache.cancel(url: url)
+  }
 }

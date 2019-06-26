@@ -35,13 +35,27 @@
                                             <constraint firstAttribute="width" secondItem="Ctu-Lc-jJE" secondAttribute="height" multiplier="15:8" id="jbd-Le-t2b"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF5-mP-kr9">
-                                        <rect key="frame" x="85.5" y="300" width="69" height="30"/>
-                                        <state key="normal" title="Download"/>
-                                        <connections>
-                                            <action selector="downloadButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="czq-b6-hNH"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="GBy-OU-Oks">
+                                        <rect key="frame" x="50.5" y="300" width="139" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF5-mP-kr9">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
+                                                <state key="normal" title="Download"/>
+                                                <connections>
+                                                    <action selector="downloadButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="czq-b6-hNH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnk-nk-Vcc">
+                                                <rect key="frame" x="91" y="0.0" width="48" height="30"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dWc-uq-CIt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34D-GZ-pXS">
                                         <rect key="frame" x="89" y="352" width="62" height="30"/>
                                         <state key="normal" title="List View"/>
@@ -61,16 +75,22 @@
                                     <constraint firstItem="Ctu-Lc-jJE" firstAttribute="width" secondItem="Ctu-Lc-jJE" secondAttribute="height" multiplier="15:8" id="DgL-E7-mdo"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mmX-Cg-JgJ">
+                                <rect key="frame" x="197" y="316" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="mmX-Cg-JgJ" firstAttribute="centerY" secondItem="Ctu-Lc-jJE" secondAttribute="centerY" id="QNp-UB-NkI"/>
                             <constraint firstItem="NAD-Bv-KAQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="keb-y6-4Bu"/>
+                            <constraint firstItem="mmX-Cg-JgJ" firstAttribute="centerX" secondItem="Ctu-Lc-jJE" secondAttribute="centerX" id="vk4-Ry-Lob"/>
                             <constraint firstItem="NAD-Bv-KAQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="yam-oN-1wg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="nJv-b8-vyH"/>
                     <connections>
+                        <outlet property="downloadActivityIndicator" destination="mmX-Cg-JgJ" id="9Le-9d-OdF"/>
                         <outlet property="downloadImageView" destination="Ctu-Lc-jJE" id="rzM-Iu-ejf"/>
                         <outlet property="imageView" destination="aSX-4I-ihN" id="cYs-NC-XXg"/>
                     </connections>
