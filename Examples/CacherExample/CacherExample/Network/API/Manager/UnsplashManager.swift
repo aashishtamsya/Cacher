@@ -37,6 +37,6 @@ private func retrieveUnsplashDatas<E>(parameterType: UnsplashParameterType, type
   }
 }
 
-func retrieveUnsplashImages(_ callback: @escaping (Result<[Asset]>) -> Void) {
-  retrieveUnsplashDatas(parameterType: .list, type: Asset.self, callback)
+func retrieveUnsplashImages(_ callback: @escaping (Result<[Photo]>) -> Void) {
+  retrieveUnsplashDatas(parameterType: .list, type: Photo.self, callback)
 }

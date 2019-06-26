@@ -15,3 +15,4 @@ excluded:
  - CacherTests/
  - Examples/
  - fastlane/
+ - Resources/
