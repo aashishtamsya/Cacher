@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol Download {
-  func download<T: Cachable>(url: URL, completion: @escaping (_ object: T?, _ cacheType: CacheType) -> Void)
+  func download<T: Cachable>(url: URL, completion: @escaping (_ object: T?, _ cacheType: CacheType) -> Void) -> RequestToken?
   
-  func cancel(url: URL) 
+  func cancel(_ url: URL, token: RequestToken?) 
 }

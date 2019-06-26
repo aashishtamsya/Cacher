@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YQK-RK-aBx">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,28 +15,28 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CacherExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="NAD-Bv-KAQ">
-                                <rect key="frame" x="87" y="112" width="240" height="434"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NAD-Bv-KAQ">
+                                <rect key="frame" x="14.5" y="88" width="291" height="416"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aSX-4I-ihN">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <rect key="frame" x="25.5" y="0.0" width="240" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="XZ3-gY-c4u"/>
                                             <constraint firstAttribute="width" secondItem="aSX-4I-ihN" secondAttribute="height" multiplier="15:8" id="dCY-kc-G02"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ctu-Lc-jJE">
-                                        <rect key="frame" x="0.0" y="150" width="240" height="128"/>
+                                        <rect key="frame" x="25.5" y="136" width="240" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="05Y-ku-u3P"/>
                                             <constraint firstAttribute="width" secondItem="Ctu-Lc-jJE" secondAttribute="height" multiplier="15:8" id="jbd-Le-t2b"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="GBy-OU-Oks">
-                                        <rect key="frame" x="50.5" y="300" width="139" height="30"/>
+                                        <rect key="frame" x="76" y="272" width="139" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF5-mP-kr9">
                                                 <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
@@ -57,17 +57,24 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34D-GZ-pXS">
-                                        <rect key="frame" x="89" y="352" width="62" height="30"/>
+                                        <rect key="frame" x="114.5" y="310" width="62" height="30"/>
                                         <state key="normal" title="List View"/>
                                         <connections>
                                             <action selector="listViewButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBY-SE-H6z"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eQ-S3-jh3">
-                                        <rect key="frame" x="37" y="404" width="166" height="30"/>
+                                        <rect key="frame" x="62.5" y="348" width="166" height="30"/>
                                         <state key="normal" title="Unsplash Implmentation"/>
                                         <connections>
                                             <action selector="unsplashButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hn-VX-hSj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2M-v9-tr4">
+                                        <rect key="frame" x="0.0" y="386" width="291" height="30"/>
+                                        <state key="normal" title="Multiple Download Source for Same Image"/>
+                                        <connections>
+                                            <action selector="multipleImageButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ru9-kV-bIk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -76,7 +83,7 @@
                                 </constraints>
                             </stackView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mmX-Cg-JgJ">
-                                <rect key="frame" x="197" y="316" width="20" height="20"/>
+                                <rect key="frame" x="150" y="278" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,7 +112,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YQK-RK-aBx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XpY-Hs-wdZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

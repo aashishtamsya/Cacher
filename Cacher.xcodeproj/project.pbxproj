@@ -22,6 +22,7 @@
 		FDC9DE0322C0B02D00A56670 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DE0222C0B02D00A56670 /* NetworkTests.swift */; };
 		FDD7DE6C22BE0B680016639A /* CacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7DE6B22BE0B680016639A /* CacherTests.swift */; };
 		FDD7DE6E22BE0B680016639A /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFE6BFE22BD32E4008699C9 /* Cacher.framework */; };
+		FDDB85CE22C37A29007C797E /* RequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB85CD22C37A29007C797E /* RequestToken.swift */; };
 		FDFE6C0322BD32E4008699C9 /* Cacher.h in Headers */ = {isa = PBXBuildFile; fileRef = FDFE6C0122BD32E4008699C9 /* Cacher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		FDD7DE6922BE0B680016639A /* CacherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7DE6B22BE0B680016639A /* CacherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacherTests.swift; sourceTree = "<group>"; };
 		FDD7DE6D22BE0B680016639A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDDB85CD22C37A29007C797E /* RequestToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestToken.swift; sourceTree = "<group>"; };
 		FDFE6BFE22BD32E4008699C9 /* Cacher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cacher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFE6C0122BD32E4008699C9 /* Cacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cacher.h; sourceTree = "<group>"; };
 		FDFE6C0222BD32E4008699C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC9DDF622C0A40A00A56670 /* Download.swift */,
+				FDDB85CD22C37A29007C797E /* RequestToken.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				FDC9DDBD22C0980A00A56670 /* Cache.swift in Sources */,
 				FDC9DDF722C0A40A00A56670 /* Download.swift in Sources */,
 				FD2F69AA22C0C387003FD42D /* UIImageView+Extensions.swift in Sources */,
+				FDDB85CE22C37A29007C797E /* RequestToken.swift in Sources */,
 				FDC9DDCB22C09D4D00A56670 /* UIImage+Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
