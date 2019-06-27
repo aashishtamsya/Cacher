@@ -11,10 +11,11 @@ import Foundation
 public enum CacheType {
   case none
   case memory
+  case disk
   
   public var isCached: Bool {
     switch self {
-    case .memory: return true
+    case .memory, .disk: return true
     case .none: return false
     }
   }

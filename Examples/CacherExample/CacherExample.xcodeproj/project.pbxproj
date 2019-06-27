@@ -46,9 +46,9 @@
 		FDC9DE1522C0B36300A56670 /* ListImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DE1322C0B36300A56670 /* ListImageCell.xib */; };
 		FDD752FF22C4D42A000C146F /* JSONExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD752FE22C4D42A000C146F /* JSONExample.storyboard */; };
 		FDD7530122C4D43E000C146F /* JSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7530022C4D43E000C146F /* JSONViewController.swift */; };
-		FDD7530F22C4DEC1000C146F /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD7530E22C4DEC1000C146F /* Cacher.framework */; };
-		FDD7531022C4DEC7000C146F /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD7530E22C4DEC1000C146F /* Cacher.framework */; };
-		FDD7531122C4DEC7000C146F /* Cacher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDD7530E22C4DEC1000C146F /* Cacher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDD7533E22C4F33A000C146F /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD7533D22C4F33A000C146F /* Cacher.framework */; };
+		FDD7533F22C4F341000C146F /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD7533D22C4F33A000C146F /* Cacher.framework */; };
+		FDD7534022C4F341000C146F /* Cacher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDD7533D22C4F33A000C146F /* Cacher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDB85CB22C36D58007C797E /* MultipleImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDB85C922C36D58007C797E /* MultipleImage.storyboard */; };
 		FDDB85CC22C36D58007C797E /* MultipleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB85CA22C36D58007C797E /* MultipleImageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -70,7 +70,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FDD7531122C4DEC7000C146F /* Cacher.framework in Embed Frameworks */,
+				FDD7534022C4F341000C146F /* Cacher.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,7 +125,7 @@
 		FDC9DE1322C0B36300A56670 /* ListImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListImageCell.xib; sourceTree = "<group>"; };
 		FDD752FE22C4D42A000C146F /* JSONExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JSONExample.storyboard; sourceTree = "<group>"; };
 		FDD7530022C4D43E000C146F /* JSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONViewController.swift; sourceTree = "<group>"; };
-		FDD7530E22C4DEC1000C146F /* Cacher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cacher.framework; sourceTree = "<group>"; };
+		FDD7533D22C4F33A000C146F /* Cacher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cacher.framework; sourceTree = "<group>"; };
 		FDDB85C922C36D58007C797E /* MultipleImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MultipleImage.storyboard; sourceTree = "<group>"; };
 		FDDB85CA22C36D58007C797E /* MultipleImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,8 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD7530F22C4DEC1000C146F /* Cacher.framework in Frameworks */,
-				FDD7531022C4DEC7000C146F /* Cacher.framework in Frameworks */,
+				FDD7533E22C4F33A000C146F /* Cacher.framework in Frameworks */,
+				FDD7533F22C4F341000C146F /* Cacher.framework in Frameworks */,
 				37A9126B9340836E039D933E /* Pods_CacherExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +310,7 @@
 		FDC9DDCC22C0A07B00A56670 = {
 			isa = PBXGroup;
 			children = (
-				FDD7530E22C4DEC1000C146F /* Cacher.framework */,
+				FDD7533D22C4F33A000C146F /* Cacher.framework */,
 				FDC9DDD722C0A07B00A56670 /* CacherExample */,
 				FD2F6A1122C0DD82003FD42D /* CacherExampleTests */,
 				FDC9DDD622C0A07B00A56670 /* Products */,

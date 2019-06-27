@@ -41,10 +41,10 @@ extension PhotoCell {
     profileURL = photo?.user?.profileImage?.mediumURL
     guard let photo = photo else { return }
     if let url = photo.user?.profileImage?.mediumURL {
-      profileCancelToken = profileImageView.loadImage(withURL: url, transition: .fade(0.5))
+      profileCancelToken = profileImageView.loadImage(withURL: url, placeholder: #imageLiteral(resourceName: "ic_profile_placeholder100"), transition: .fade(0.5))
     }
     if let url = photo.urls?.fullURL {
-      photoCancelToken = photoImageView.loadImage(withURL: url, transition: .fade(0.5))
+      photoCancelToken = photoImageView.loadImage(withURL: url, placeholder: #imageLiteral(resourceName: "ic_pattern_placeholder"), transition: .fade(0.5))
     }
     nameLabel.text = photo.user?.name
     usernameLabel.text = photo.user?.handler
@@ -69,8 +69,8 @@ private extension PhotoCell {
     photoCancelToken        = nil
     profileURL              = nil
     profileCancelToken      = nil
-    profileImageView.image  = nil
-    photoImageView.image    = nil
+    profileImageView.image  = #imageLiteral(resourceName: "ic_profile_placeholder100")
+    photoImageView.image    = #imageLiteral(resourceName: "ic_pattern_placeholder")
     likeImageView.image     = #imageLiteral(resourceName: "ic_like")
     likeImageView.tintColor = .gray
     profileImageView.roundCorners()

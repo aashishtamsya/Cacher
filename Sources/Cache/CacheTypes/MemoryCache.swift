@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MemoryCache: Cache {
+final internal class MemoryCache: MemoryCachable {
   private let cache = NSCache<AnyObject, AnyObject>()
 
   func store<T>(key: String, object: T, _ completion: (() -> Void)?) where T: Cachable {

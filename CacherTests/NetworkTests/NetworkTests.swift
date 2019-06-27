@@ -17,8 +17,8 @@ final class NetworkTests: XCTestCase {
     }
     let expectation = self.expectation(description: "Testing of downloading image and cache it.")
     let cache = Cacher.sharedCache
-    _ = cache.download(url: imageURL) { (object: Data?, _)  in
-      cache.retrieve(key: imageURL.absoluteString) { (data: Data?) in
+    _ = cache.download(cacheType: .memory, url: imageURL) { (object: Data?, _)  in
+      cache.retrieve(from: .memory, key: imageURL.absoluteString) { (data: Data?) in
         if let data = data {
           let image = UIImage(data: data)
           XCTAssert(image != nil, "no image in cache.")
@@ -40,8 +40,8 @@ final class NetworkTests: XCTestCase {
       let cache = Cacher.sharedCache
       let expectation = self.expectation(description: "Performance testing of downloading image and cache it.")
       startMeasuring()
-      _ = cache.download(url: url) { (object: Data?, _) in
-        cache.retrieve(key: url.absoluteString) { (data: Data?) in
+      _ = cache.download(cacheType: .memory, url: url) { (object: Data?, _) in
+        cache.retrieve(from: .memory, key: url.absoluteString) { (data: Data?) in
           if let data = data {
             let image = UIImage(data: data)
             XCTAssert(image != nil, "no image in cache.")

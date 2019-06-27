@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD2F69AA22C0C387003FD42D /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69A922C0C387003FD42D /* UIImageView+Extensions.swift */; };
+		FD2F69AA22C0C387003FD42D /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69A922C0C387003FD42D /* UIImageView+Cache.swift */; };
 		FD2F69AD22C0C41A003FD42D /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69AC22C0C41A003FD42D /* ImageTransition.swift */; };
 		FD2F69B022C0C5F0003FD42D /* UIImageViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69AF22C0C5F0003FD42D /* UIImageViewExtensionTests.swift */; };
 		FD2F69D722C0CCE4003FD42D /* CacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69D522C0CBB8003FD42D /* CacheType.swift */; };
@@ -20,6 +20,11 @@
 		FDC9DDF722C0A40A00A56670 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDF622C0A40A00A56670 /* Download.swift */; };
 		FDC9DDFB22C0A61500A56670 /* Data+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDFA22C0A61500A56670 /* Data+Cache.swift */; };
 		FDC9DE0322C0B02D00A56670 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DE0222C0B02D00A56670 /* NetworkTests.swift */; };
+		FDD7531322C4E14B000C146F /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7531222C4E14B000C146F /* DiskCache.swift */; };
+		FDD7531822C4E411000C146F /* MemoryCachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7531722C4E411000C146F /* MemoryCachable.swift */; };
+		FDD7531A22C4E440000C146F /* DiskCachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7531922C4E440000C146F /* DiskCachable.swift */; };
+		FDD7532A22C4EDCF000C146F /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7532922C4EDCF000C146F /* URL+Extensions.swift */; };
+		FDD7533822C4F145000C146F /* JSONCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7533722C4F145000C146F /* JSONCacheTests.swift */; };
 		FDD7DE6C22BE0B680016639A /* CacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7DE6B22BE0B680016639A /* CacherTests.swift */; };
 		FDD7DE6E22BE0B680016639A /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFE6BFE22BD32E4008699C9 /* Cacher.framework */; };
 		FDDB85CE22C37A29007C797E /* RequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB85CD22C37A29007C797E /* RequestToken.swift */; };
@@ -37,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FD2F69A922C0C387003FD42D /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		FD2F69A922C0C387003FD42D /* UIImageView+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
 		FD2F69AC22C0C41A003FD42D /* ImageTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
 		FD2F69AF22C0C5F0003FD42D /* UIImageViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensionTests.swift; sourceTree = "<group>"; };
 		FD2F69D522C0CBB8003FD42D /* CacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheType.swift; sourceTree = "<group>"; };
@@ -50,6 +55,11 @@
 		FDC9DDF622C0A40A00A56670 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		FDC9DDFA22C0A61500A56670 /* Data+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Cache.swift"; sourceTree = "<group>"; };
 		FDC9DE0222C0B02D00A56670 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		FDD7531222C4E14B000C146F /* DiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
+		FDD7531722C4E411000C146F /* MemoryCachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCachable.swift; sourceTree = "<group>"; };
+		FDD7531922C4E440000C146F /* DiskCachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCachable.swift; sourceTree = "<group>"; };
+		FDD7532922C4EDCF000C146F /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		FDD7533722C4F145000C146F /* JSONCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCacheTests.swift; sourceTree = "<group>"; };
 		FDD7DE6922BE0B680016639A /* CacherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7DE6B22BE0B680016639A /* CacherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacherTests.swift; sourceTree = "<group>"; };
 		FDD7DE6D22BE0B680016639A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,11 +107,9 @@
 		FDC9DDC222C098E700A56670 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
-				FDC9DDBC22C0980A00A56670 /* Cache.swift */,
-				FDC9DDC022C098E400A56670 /* MemoryCache.swift */,
-				FDC9DDBE22C0985000A56670 /* Cachable.swift */,
 				FDC9DDC322C099EE00A56670 /* Cacher.swift */,
-				FD2F69D522C0CBB8003FD42D /* CacheType.swift */,
+				FDD7531422C4E170000C146F /* CacheTypes */,
+				FDD7531522C4E183000C146F /* Protocols */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -110,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC9DDC822C09B9700A56670 /* CacheTests.swift */,
+				FDD7533722C4F145000C146F /* JSONCacheTests.swift */,
 			);
 			path = CacheTests;
 			sourceTree = "<group>";
@@ -128,7 +137,8 @@
 			children = (
 				FDC9DDFA22C0A61500A56670 /* Data+Cache.swift */,
 				FDC9DDCA22C09D4D00A56670 /* UIImage+Cache.swift */,
-				FD2F69A922C0C387003FD42D /* UIImageView+Extensions.swift */,
+				FD2F69A922C0C387003FD42D /* UIImageView+Cache.swift */,
+				FDD7532922C4EDCF000C146F /* URL+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -139,6 +149,36 @@
 				FDC9DE0222C0B02D00A56670 /* NetworkTests.swift */,
 			);
 			path = NetworkTests;
+			sourceTree = "<group>";
+		};
+		FDD7531422C4E170000C146F /* CacheTypes */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F69D522C0CBB8003FD42D /* CacheType.swift */,
+				FDD7531222C4E14B000C146F /* DiskCache.swift */,
+				FDC9DDC022C098E400A56670 /* MemoryCache.swift */,
+			);
+			path = CacheTypes;
+			sourceTree = "<group>";
+		};
+		FDD7531522C4E183000C146F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FDC9DDBC22C0980A00A56670 /* Cache.swift */,
+				FDD7531722C4E411000C146F /* MemoryCachable.swift */,
+				FDD7531922C4E440000C146F /* DiskCachable.swift */,
+				FDC9DDBE22C0985000A56670 /* Cachable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FDD7531622C4E1DC000C146F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FDC9DDFF22C0AFCE00A56670 /* Extensions */,
+				FD2F69AB22C0C408003FD42D /* Image */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		FDD7DE6A22BE0B680016639A /* CacherTests */ = {
@@ -174,11 +214,10 @@
 		FDFE6C0022BD32E4008699C9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FD2F69AB22C0C408003FD42D /* Image */,
 				FDFE6C0122BD32E4008699C9 /* Cacher.h */,
-				FDC9DDFF22C0AFCE00A56670 /* Extensions */,
-				FDC9DDF322C0A3E700A56670 /* Network */,
 				FDC9DDC222C098E700A56670 /* Cache */,
+				FDC9DDF322C0A3E700A56670 /* Network */,
+				FDD7531622C4E1DC000C146F /* Shared */,
 				FDFE6C0222BD32E4008699C9 /* Info.plist */,
 			);
 			path = Sources;
@@ -318,6 +357,7 @@
 			files = (
 				FDC9DE0322C0B02D00A56670 /* NetworkTests.swift in Sources */,
 				FDC9DDC922C09B9700A56670 /* CacheTests.swift in Sources */,
+				FDD7533822C4F145000C146F /* JSONCacheTests.swift in Sources */,
 				FD2F69B022C0C5F0003FD42D /* UIImageViewExtensionTests.swift in Sources */,
 				FDD7DE6C22BE0B680016639A /* CacherTests.swift in Sources */,
 			);
@@ -332,10 +372,14 @@
 				FD2F69D722C0CCE4003FD42D /* CacheType.swift in Sources */,
 				FDC9DDC422C099EE00A56670 /* Cacher.swift in Sources */,
 				FDC9DDBF22C0985000A56670 /* Cachable.swift in Sources */,
+				FDD7531A22C4E440000C146F /* DiskCachable.swift in Sources */,
+				FDD7531322C4E14B000C146F /* DiskCache.swift in Sources */,
 				FDC9DDFB22C0A61500A56670 /* Data+Cache.swift in Sources */,
 				FDC9DDBD22C0980A00A56670 /* Cache.swift in Sources */,
+				FDD7531822C4E411000C146F /* MemoryCachable.swift in Sources */,
 				FDC9DDF722C0A40A00A56670 /* Download.swift in Sources */,
-				FD2F69AA22C0C387003FD42D /* UIImageView+Extensions.swift in Sources */,
+				FD2F69AA22C0C387003FD42D /* UIImageView+Cache.swift in Sources */,
+				FDD7532A22C4EDCF000C146F /* URL+Extensions.swift in Sources */,
 				FDDB85CE22C37A29007C797E /* RequestToken.swift in Sources */,
 				FDC9DDCB22C09D4D00A56670 /* UIImage+Cache.swift in Sources */,
 			);
