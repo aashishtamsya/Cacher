@@ -27,6 +27,7 @@
 "404NotFoundTitle"               = "404 Error - Not Found";
 
 "UnsplashTitle" = "Unsplash Screen";
+"5000ImagesTitle" = "5000 Images";
 
 // MARK: - Colloquial Time Strings
 "AMomentAgo" = "a moment ago";
