@@ -11,12 +11,12 @@ import Foundation
 class MemoryCache: Cache {
   private let cache = NSCache<AnyObject, AnyObject>()
 
-  func store<T>(key: String, object: T, completion: (() -> Void)?) where T: Cachable {
+  func store<T>(key: String, object: T, _ completion: (() -> Void)?) where T: Cachable {
     cache.setObject(object as AnyObject, forKey: key as AnyObject)
     completion?()
   }
   
-  func retrieve<T>(key: String, completion: @escaping (T?) -> Void) where T: Cachable {
+  func retrieve<T>(key: String, _ completion: @escaping (T?) -> Void) where T: Cachable {
     let object = cache.object(forKey: key as AnyObject)
     completion(object as? T)
   }

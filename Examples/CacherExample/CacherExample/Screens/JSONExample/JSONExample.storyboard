@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nGv-yR-ea6">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="2lB-3P-KuF">
+            <objects>
+                <viewController storyboardIdentifier="JSONViewController" id="nGv-yR-ea6" customClass="JSONViewController" customModule="CacherExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Qb-f6-b8f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hwj-yG-68a">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC0-Wz-e31">
+                                        <rect key="frame" x="8" y="8" width="398" height="764"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSU-h0-Rqm">
+                                        <rect key="frame" x="8" y="780" width="398" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Wca-Iz-i6k"/>
+                                        </constraints>
+                                        <state key="normal" title="Download"/>
+                                        <connections>
+                                            <action selector="downloadButtonSelected:" destination="nGv-yR-ea6" eventType="touchUpInside" id="2WQ-Ia-f9a"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hwj-yG-68a" firstAttribute="leading" secondItem="z7L-8l-lgP" secondAttribute="leading" id="5wd-1g-JB1"/>
+                            <constraint firstItem="Hwj-yG-68a" firstAttribute="top" secondItem="z7L-8l-lgP" secondAttribute="top" id="Ubg-LN-dzm"/>
+                            <constraint firstItem="z7L-8l-lgP" firstAttribute="trailing" secondItem="Hwj-yG-68a" secondAttribute="trailing" id="cfL-gc-Aac"/>
+                            <constraint firstItem="z7L-8l-lgP" firstAttribute="bottom" secondItem="Hwj-yG-68a" secondAttribute="bottom" id="dhf-fk-H06"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z7L-8l-lgP"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="GC0-Wz-e31" id="oTf-RB-nDY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xkm-jL-IE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-41" y="102"/>
+        </scene>
+    </scenes>
+</document>

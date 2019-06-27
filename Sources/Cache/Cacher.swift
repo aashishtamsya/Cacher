@@ -13,7 +13,7 @@ private var taskPool: [URLSessionDataTask: URL] = [:]
 public class Cacher {
   public static let sharedCache = Cacher()
   
-  let memoryCache = MemoryCache()
+  private let memoryCache = MemoryCache()
   private var session: URLSession
   
   init() {
@@ -26,11 +26,11 @@ extension Cacher: Cache {
     memoryCache.removeAll()
   }
   
-  public func store<T>(key: String, object: T, completion: (() -> Void)?) where T: Cachable {
-    memoryCache.store(key: key, object: object, completion: nil)
+  public func store<T>(key: String, object: T, _ completion: (() -> Void)?) where T: Cachable {
+    memoryCache.store(key: key, object: object, completion)
   }
   
-  public func retrieve<T>(key: String, completion: @escaping (T?) -> Void) where T: Cachable {
+  public func retrieve<T>(key: String, _ completion: @escaping (T?) -> Void) where T: Cachable {
     memoryCache.retrieve(key: key) { (object: T?) in
       if let object = object {
         completion(object)
@@ -51,15 +51,12 @@ extension Cacher: Download {
         completion(data as? T, .memory)
       } else {
         let task = self.session.dataTask(with: url) { [weak self] data, _, _ in
-          guard let strongSelf = self else {
+          guard let strongSelf = self, let data = data else {
             completion(nil, .none)
             return
           }
-          if let data = data {
-            strongSelf.memoryCache.store(key: url.absoluteString, object: data, completion: nil)
+          strongSelf.memoryCache.store(key: url.absoluteString, object: data) {
             completion(data as? T, .none)
-          } else {
-            completion(nil, .none)
           }
         }
         task.resume()

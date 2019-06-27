@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Qd7naf+kZJyKj1CRbRReTdKpJr0=
+		Enzmc9GX0Cz4EBU3GQDblxiP3PQ=
 		</data>
 		<key>Modules/Cacher.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		DGCzaGaCYxpyx3dgluvur2Jj9KQ=
+		DldkSKhhNbmA62889cuRTPdIkSg=
 		</data>
 		<key>Modules/Cacher.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		ErLy6h6gCN/C3v3p2tXTpStLqTY=
+		mVk13AIEkCN4H9qq8haEt/8gLAg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -33,6 +33,10 @@
 	<dict>
 		<key>Headers/Cacher-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			9nqlrCqbcgsSRChOy6PntB8J0qM=
+			</data>
 			<key>hash2</key>
 			<data>
 			kH7td664SlLd93puzzRvFdLWuNzLDU31Mc/KX1cp3Kw=
@@ -40,6 +44,10 @@
 		</dict>
 		<key>Headers/Cacher.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			WAK+Y63QB1ixNp0pf4ySakYrIMA=
+			</data>
 			<key>hash2</key>
 			<data>
 			sKQvI2UwUR5AkV+oqoP6O51cb120qlcmBRChcctEV6Y=
@@ -47,20 +55,32 @@
 		</dict>
 		<key>Modules/Cacher.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			DldkSKhhNbmA62889cuRTPdIkSg=
+			</data>
 			<key>hash2</key>
 			<data>
-			AnL0FYm+lzoJJ9JkP0aMWdDKu6SJa638VbpRwi/eh38=
+			WpgNz+yZnisGRz2LioAZS6PRntFguUc/nTrYamxAF4Y=
 			</data>
 		</dict>
 		<key>Modules/Cacher.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			mVk13AIEkCN4H9qq8haEt/8gLAg=
+			</data>
 			<key>hash2</key>
 			<data>
-			ecp447M/f2lKwpBFRGCy07Omy8uksH1CSqarffVRa14=
+			hn3JSHH0UKSqIOEDude76lxwXouDWUefxxyRnpRR76w=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ZASgWXVIy/Erp28juQ4sJdlCZNA=
+			</data>
 			<key>hash2</key>
 			<data>
 			mLJBoIFnOqQ3H1v6CzEARgrQkRTo9QvCq8YA9rgfRv4=
