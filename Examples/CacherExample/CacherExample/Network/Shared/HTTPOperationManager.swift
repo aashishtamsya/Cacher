@@ -27,7 +27,11 @@ final class HTTPRequestOperationManager {
   
   init(baseUrl: String? = nil, apiEndpoint: String) {
     endpoint = apiEndpoint
-    baseURL = "\(APIBaseURL)/\(apiEndpoint)"
+    if let baseUrl = baseUrl {
+      baseURL = "\(baseUrl)/\(apiEndpoint)"
+    } else {
+      baseURL = "\(APIBaseURL)/\(apiEndpoint)"
+    }
     reachability = Reachability()!
   }
   static func cancelAllRequests() {

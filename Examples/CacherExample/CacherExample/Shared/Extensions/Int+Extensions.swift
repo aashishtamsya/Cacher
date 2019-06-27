@@ -15,4 +15,6 @@ extension Int {
       return "\(self)"
     }
   }
+  
+  var toString: String { get { return "\(self)"} }
 }

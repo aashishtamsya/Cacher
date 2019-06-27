@@ -67,17 +67,17 @@
                                         <rect key="frame" x="8" y="590" width="398" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="63I-RD-fv8">
-                                                <rect key="frame" x="123" y="0.0" width="152" height="40"/>
+                                                <rect key="frame" x="109" y="0.0" width="180" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34D-GZ-pXS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="40"/>
-                                                        <state key="normal" title="List View"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="40"/>
+                                                        <state key="normal" title="5000 images"/>
                                                         <connections>
                                                             <action selector="listViewButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBY-SE-H6z"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qR2-6t-Zpi">
-                                                        <rect key="frame" x="84" y="0.0" width="68" height="40"/>
+                                                        <rect key="frame" x="112" y="0.0" width="68" height="40"/>
                                                         <state key="normal" title="JSON File"/>
                                                         <connections>
                                                             <action selector="jsonFileButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRX-VC-9yy"/>
