@@ -1,8 +1,8 @@
-# PinBoard
+# Cacher
 
 [![Build Status](https://travis-ci.org/aashishtamsya/MindValley-Challenge.svg?branch=develop)](https://travis-ci.org/aashishtamsya/MindValley-Challenge)
 
-A framework to download and cache images from url.
+Cacher is an image downloading and caching framework. Also support downloading files such as JSON. The frame downloads and cache the image from different urls on iOS allowing user to have a smooth user experience.
 
 ## Table of Content.
 
