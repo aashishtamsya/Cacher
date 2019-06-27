@@ -1,10 +1,12 @@
 PODS:
   - Alamofire (4.8.2)
+  - Cacher (0.0.3)
   - ReachabilitySwift (4.3.1)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
+  - Cacher (from `https://github.com/aashishtamsya/PinBoard`, branch `feature/9`)
   - ReachabilitySwift (~> 4.3.1)
   - SwiftyJSON (~> 5.0.0)
 
@@ -14,11 +16,22 @@ SPEC REPOS:
     - ReachabilitySwift
     - SwiftyJSON
 
+EXTERNAL SOURCES:
+  Cacher:
+    :branch: feature/9
+    :git: https://github.com/aashishtamsya/PinBoard
+
+CHECKOUT OPTIONS:
+  Cacher:
+    :commit: 09db1020e419d598a3f59d8b5c57c8689f0fce00
+    :git: https://github.com/aashishtamsya/PinBoard
+
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Cacher: 897095db3cdd18adf2b23c18cd41afed70d26481
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 0fe658af1fcd7ca09101b7cc268cd42b74f2f604
+PODFILE CHECKSUM: 9dc5f7ca6719c1c2e3e9c0815948ae5dfb61e95b
 
 COCOAPODS: 1.7.0
