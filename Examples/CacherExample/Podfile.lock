@@ -6,7 +6,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
-  - Cacher (from `https://github.com/aashishtamsya/PinBoard`, branch `develop`)
+  - Cacher (from `https://github.com/aashishtamsya/Cacher`, branch `develop`)
   - ReachabilitySwift (~> 4.3.1)
   - SwiftyJSON (~> 5.0.0)
 
@@ -19,12 +19,12 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Cacher:
     :branch: develop
-    :git: https://github.com/aashishtamsya/PinBoard
+    :git: https://github.com/aashishtamsya/Cacher
 
 CHECKOUT OPTIONS:
   Cacher:
     :commit: f22a63e0388a319342a7ad8b9717201c85875543
-    :git: https://github.com/aashishtamsya/PinBoard
+    :git: https://github.com/aashishtamsya/Cacher
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3

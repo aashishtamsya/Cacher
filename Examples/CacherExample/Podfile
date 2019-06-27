@@ -6,7 +6,7 @@ def shared_pods
  pod 'Alamofire', '~> 4.8.2'
  pod 'ReachabilitySwift', '~> 4.3.1'
  pod 'SwiftyJSON', '~> 5.0.0'
- pod 'Cacher', git: 'https://github.com/aashishtamsya/PinBoard', branch: 'develop'
+ pod 'Cacher', git: 'https://github.com/aashishtamsya/Cacher', branch: 'develop'
 end
 
 def testing_pods
