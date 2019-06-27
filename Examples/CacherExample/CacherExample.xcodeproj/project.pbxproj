@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		37A9126B9340836E039D933E /* Pods_CacherExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC49666D4661D92980E76 /* Pods_CacherExample.framework */; };
 		539690206A7D918CA6F9D6BE /* Pods_CacherExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE4DB622C94F6F51CDB164B /* Pods_CacherExampleTests.framework */; };
-		FD0A1AE722C392A7006FD682 /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1AE622C392A7006FD682 /* Cacher.framework */; };
-		FD0A1AE822C392AB006FD682 /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1AE622C392A7006FD682 /* Cacher.framework */; };
-		FD0A1AE922C392AB006FD682 /* Cacher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1AE622C392A7006FD682 /* Cacher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD0A1AEC22C39A6C006FD682 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A1AEB22C39A6C006FD682 /* ProfileImage.swift */; };
 		FD0A1AEF22C39B82006FD682 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A1AED22C39B82006FD682 /* PhotoCell.swift */; };
 		FD0A1AF022C39B82006FD682 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0A1AEE22C39B82006FD682 /* PhotoCell.xib */; };
@@ -47,6 +44,11 @@
 		FDC9DE0C22C0B27A00A56670 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DE0B22C0B27A00A56670 /* ListViewController.swift */; };
 		FDC9DE1422C0B36300A56670 /* ListImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DE1222C0B36300A56670 /* ListImageCell.swift */; };
 		FDC9DE1522C0B36300A56670 /* ListImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC9DE1322C0B36300A56670 /* ListImageCell.xib */; };
+		FDD752FF22C4D42A000C146F /* JSONExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD752FE22C4D42A000C146F /* JSONExample.storyboard */; };
+		FDD7530122C4D43E000C146F /* JSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7530022C4D43E000C146F /* JSONViewController.swift */; };
+		FDD7533E22C4F33A000C146F /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD7533D22C4F33A000C146F /* Cacher.framework */; };
+		FDD7533F22C4F341000C146F /* Cacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD7533D22C4F33A000C146F /* Cacher.framework */; };
+		FDD7534022C4F341000C146F /* Cacher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDD7533D22C4F33A000C146F /* Cacher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDB85CB22C36D58007C797E /* MultipleImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDB85C922C36D58007C797E /* MultipleImage.storyboard */; };
 		FDDB85CC22C36D58007C797E /* MultipleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB85CA22C36D58007C797E /* MultipleImageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -68,7 +70,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FD0A1AE922C392AB006FD682 /* Cacher.framework in Embed Frameworks */,
+				FDD7534022C4F341000C146F /* Cacher.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,7 +84,6 @@
 		A4CA6E94CCB6CCBF6C6E7E65 /* Pods-CacherExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExample.debug.xcconfig"; path = "Target Support Files/Pods-CacherExample/Pods-CacherExample.debug.xcconfig"; sourceTree = "<group>"; };
 		AC3D14BC5CD1554C8D96AB49 /* Pods-CacherExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-CacherExampleTests/Pods-CacherExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA0045CC43266F698EC6694E /* Pods-CacherExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacherExampleTests.release.xcconfig"; path = "Target Support Files/Pods-CacherExampleTests/Pods-CacherExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		FD0A1AE622C392A7006FD682 /* Cacher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cacher.framework; sourceTree = "<group>"; };
 		FD0A1AEB22C39A6C006FD682 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		FD0A1AED22C39B82006FD682 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		FD0A1AEE22C39B82006FD682 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
@@ -122,6 +123,9 @@
 		FDC9DE0B22C0B27A00A56670 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FDC9DE1222C0B36300A56670 /* ListImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImageCell.swift; sourceTree = "<group>"; };
 		FDC9DE1322C0B36300A56670 /* ListImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListImageCell.xib; sourceTree = "<group>"; };
+		FDD752FE22C4D42A000C146F /* JSONExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JSONExample.storyboard; sourceTree = "<group>"; };
+		FDD7530022C4D43E000C146F /* JSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONViewController.swift; sourceTree = "<group>"; };
+		FDD7533D22C4F33A000C146F /* Cacher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cacher.framework; sourceTree = "<group>"; };
 		FDDB85C922C36D58007C797E /* MultipleImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MultipleImage.storyboard; sourceTree = "<group>"; };
 		FDDB85CA22C36D58007C797E /* MultipleImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,8 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD0A1AE722C392A7006FD682 /* Cacher.framework in Frameworks */,
-				FD0A1AE822C392AB006FD682 /* Cacher.framework in Frameworks */,
+				FDD7533E22C4F33A000C146F /* Cacher.framework in Frameworks */,
+				FDD7533F22C4F341000C146F /* Cacher.framework in Frameworks */,
 				37A9126B9340836E039D933E /* Pods_CacherExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +310,7 @@
 		FDC9DDCC22C0A07B00A56670 = {
 			isa = PBXGroup;
 			children = (
-				FD0A1AE622C392A7006FD682 /* Cacher.framework */,
+				FDD7533D22C4F33A000C146F /* Cacher.framework */,
 				FDC9DDD722C0A07B00A56670 /* CacherExample */,
 				FD2F6A1122C0DD82003FD42D /* CacherExampleTests */,
 				FDC9DDD622C0A07B00A56670 /* Products */,
@@ -358,6 +362,7 @@
 		FDC9DE0E22C0B32400A56670 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FDD752FD22C4D417000C146F /* JSONExample */,
 				FDC9DE0F22C0B33700A56670 /* Main */,
 				FDC9DE0822C0B25700A56670 /* ListScreen */,
 				FDDB85C822C36D58007C797E /* MutipleImage */,
@@ -391,6 +396,15 @@
 				FDC9DE1322C0B36300A56670 /* ListImageCell.xib */,
 			);
 			path = ListImageCell;
+			sourceTree = "<group>";
+		};
+		FDD752FD22C4D417000C146F /* JSONExample */ = {
+			isa = PBXGroup;
+			children = (
+				FDD7530022C4D43E000C146F /* JSONViewController.swift */,
+				FDD752FE22C4D42A000C146F /* JSONExample.storyboard */,
+			);
+			path = JSONExample;
 			sourceTree = "<group>";
 		};
 		FDDB85C822C36D58007C797E /* MutipleImage */ = {
@@ -504,6 +518,7 @@
 				FD0A1AF022C39B82006FD682 /* PhotoCell.xib in Resources */,
 				FDDB85CB22C36D58007C797E /* MultipleImage.storyboard in Resources */,
 				FD2F6A0422C0D6F5003FD42D /* Unsplash.storyboard in Resources */,
+				FDD752FF22C4D42A000C146F /* JSONExample.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +640,7 @@
 				FD2F6A0B22C0DAFD003FD42D /* UnsplashManager.swift in Sources */,
 				FD0A1AF822C3A484006FD682 /* Date+Extensions.swift in Sources */,
 				FD2F69EA22C0D1BB003FD42D /* Photo.swift in Sources */,
+				FDD7530122C4D43E000C146F /* JSONViewController.swift in Sources */,
 				FD0A1AEF22C39B82006FD682 /* PhotoCell.swift in Sources */,
 				FD2F69F022C0D25C003FD42D /* Decoder.swift in Sources */,
 				FD0A1AF222C39E2A006FD682 /* Int+Extensions.swift in Sources */,
@@ -841,6 +857,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CacherExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -864,6 +881,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CacherExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

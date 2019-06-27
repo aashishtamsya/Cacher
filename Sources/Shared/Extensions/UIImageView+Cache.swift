@@ -1,5 +1,5 @@
 //
-//  UIImageView+Extensions.swift
+//  UIImageView+Cache.swift
 //  Cacher
 //
 //  Created by Aashish Tamsya on 24/06/19.
@@ -11,7 +11,7 @@ import Foundation
 extension UIImageView {
   public func loadImage(withURL url: URL, placeholder: UIImage? = nil, transition: ImageTransition? = .none, completion: ((UIImage?) -> Void)? = nil) -> RequestToken? {
     let cache = Cacher.sharedCache
-    let token = cache.download(url: url) { (object: Data?, cacheType: CacheType) in
+    let token = cache.download(cacheType: .memory, url: url) { (object: Data?, cacheType: CacheType) in
       if let data = object, let image = UIImage(data: data) {
         guard self.requiresTransition(transition: transition ?? .none, cacheType: cacheType) else {
           DispatchQueue.main.async {

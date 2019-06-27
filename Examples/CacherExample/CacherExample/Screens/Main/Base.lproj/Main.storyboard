@@ -66,13 +66,28 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rtl-ZC-XQq">
                                         <rect key="frame" x="8" y="590" width="398" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34D-GZ-pXS">
-                                                <rect key="frame" x="116" y="0.0" width="166" height="40"/>
-                                                <state key="normal" title="List View"/>
-                                                <connections>
-                                                    <action selector="listViewButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBY-SE-H6z"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="63I-RD-fv8">
+                                                <rect key="frame" x="123" y="0.0" width="152" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34D-GZ-pXS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="40"/>
+                                                        <state key="normal" title="List View"/>
+                                                        <connections>
+                                                            <action selector="listViewButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBY-SE-H6z"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qR2-6t-Zpi">
+                                                        <rect key="frame" x="84" y="0.0" width="68" height="40"/>
+                                                        <state key="normal" title="JSON File"/>
+                                                        <connections>
+                                                            <action selector="jsonFileButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRX-VC-9yy"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="qR2-6t-Zpi" firstAttribute="height" secondItem="34D-GZ-pXS" secondAttribute="height" id="Dvb-AX-3NA"/>
+                                                </constraints>
+                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eQ-S3-jh3">
                                                 <rect key="frame" x="116" y="40" width="166" height="40"/>
                                                 <state key="normal" title="Unsplash Implmentation"/>
@@ -82,9 +97,7 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="2eQ-S3-jh3" firstAttribute="height" secondItem="34D-GZ-pXS" secondAttribute="height" id="07m-Ly-JGA"/>
-                                            <constraint firstItem="2eQ-S3-jh3" firstAttribute="width" secondItem="34D-GZ-pXS" secondAttribute="width" id="2YP-Gx-cMn"/>
-                                            <constraint firstItem="2eQ-S3-jh3" firstAttribute="height" secondItem="34D-GZ-pXS" secondAttribute="height" id="8lD-BS-MgL"/>
+                                            <constraint firstItem="2eQ-S3-jh3" firstAttribute="height" secondItem="34D-GZ-pXS" secondAttribute="height" id="G9f-uX-chk"/>
                                         </constraints>
                                         <variation key="heightClass=compact-widthClass=compact" axis="horizontal" spacing="16"/>
                                     </stackView>
@@ -114,14 +127,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="rMX-0X-X82" firstAttribute="height" secondItem="iF5-mP-kr9" secondAttribute="height" id="CxB-Md-d0Q"/>
-                                    <constraint firstItem="N2M-v9-tr4" firstAttribute="height" secondItem="34D-GZ-pXS" secondAttribute="height" id="Jdn-G7-nRU"/>
                                     <constraint firstItem="2eQ-S3-jh3" firstAttribute="height" secondItem="iF5-mP-kr9" secondAttribute="height" id="Qdv-b2-ybq"/>
                                     <constraint firstItem="N2M-v9-tr4" firstAttribute="height" secondItem="iF5-mP-kr9" secondAttribute="height" id="d3L-XH-ruv"/>
-                                    <constraint firstItem="rMX-0X-X82" firstAttribute="height" secondItem="34D-GZ-pXS" secondAttribute="height" id="lUc-dR-8Ye"/>
-                                    <constraint firstItem="34D-GZ-pXS" firstAttribute="height" secondItem="iF5-mP-kr9" secondAttribute="height" id="m5M-hO-Nsp"/>
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                <variation key="heightClass=compact-widthClass=compact"/>
                             </stackView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mmX-Cg-JgJ">
                                 <rect key="frame" x="197" y="482.5" width="20" height="20"/>
