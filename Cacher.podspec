@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "Cacher"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.6"
   spec.summary      = "Image downloading and caching framework. Also support downloading files such as JSON."
   spec.swift_version = '5.0'
 	
@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  =  "Pinboard is an image downloading and caching framework. Also support downloading files such as JSON. The frame downloads and cache the image from different urls on iOS allowing user to have a smooth user experience."
 
-  spec.homepage     = "https://github.com/aashishtamsya/PinBoard"
+  spec.homepage     = "https://github.com/aashishtamsya/Cacher"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -77,7 +77,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/aashishtamsya/PinBoard.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/aashishtamsya/Cacher.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
