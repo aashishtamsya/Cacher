@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "Cacher"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.3"
   spec.summary      = "Image downloading and caching framework. Also support downloading files such as JSON."
   spec.swift_version = '5.0'
 	
@@ -62,7 +62,6 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  spec.platform     = :ios
   spec.platform     = :ios, "10.0"
 
   #  When using multiple platforms
