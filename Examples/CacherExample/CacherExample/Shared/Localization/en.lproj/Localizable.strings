@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  CacherExample
+
+  Created by Aashish Tamsya on 24/06/19.
+  Copyright © 2019 Aashish Tamsya. All rights reserved.
+*/
+
+"InternetConnectionError" = "There seems to be a problem with your network connection.";
+"UnexpectedError"         = "Something went wrong, we're unable to load at this moment. Please try again later.";
+"UnauthorizedAccess"      = "Incorrect username or password.";
+"UnknownError"            = "Sorry, we are not sure what happened.";
+"ServerError"             = "There was a problem with the Server. Please try again.";
+"LoginError"              = "There was a problem with your login credentials. Please try again.";
+"ServerTimeoutError"      = "There seems to be a problem with the intranet and we're not able to connect right now.";
+"401NoAccessError"        = "Sorry, but it seems that you're not allowed to view this.";
+"404NotFoundError"        = "We can't find what you were looking for. The item might have been moved or deleted.";
+
+"InternetConnectionErrorTitle"   = "You're Offline";
+"UnexpectedErrorTitle"           = "Oops!";
+"UnauthorizedAccessTitle"        = "Unauthorized Access";
+"UnknownErrorTitle"              = "Oops! Something went wrong";
+"ServerErrorTitle"               = "Server Error";
+"UnauthorizedAccessErrorMessage" = "Unauthorized Access. Please login again.";
+"ServerTimeoutTitle"             = "Intranet Offline";
+"401NoAccessTitle"               = "401 Error - No Access";
+"404NotFoundTitle"               = "404 Error - Not Found";
+
+"UnsplashTitle" = "Unsplash Screen";
+"5000ImagesTitle" = "5000 Images";
+
+// MARK: - Colloquial Time Strings
+"AMomentAgo" = "a moment ago";
+"AYearAgo"   = "%d year ago";
+"YearsAgo"   = "%d years ago";
+"AMonthAgo"  = "%d month ago";
+"MonthsAgo"  = "%d months ago";
+"AWeekAgo"   = "%d week ago";
+"WeeksAgo"   = "%d weeks ago";
+"ADayAgo"    = "%d day ago";
+"DaysAgo"    = "%d days ago";
+"AHourAgo"   = "%d hour ago";
+"HoursAgo"   = "%d hours ago";
+"AMinuteAgo" = "%d minute ago";
+"MinutesAgo" = "%d minutes ago";

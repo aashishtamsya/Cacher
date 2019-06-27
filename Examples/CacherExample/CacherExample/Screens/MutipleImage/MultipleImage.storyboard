@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YQK-RK-aBx">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Multiple Image View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MultipleImageViewController" id="BYZ-38-t0r" customClass="MultipleImageViewController" customModule="CacherExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NAD-Bv-KAQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MDN-NO-KuS">
+                                        <rect key="frame" x="8" y="8" width="398" height="710"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IPi-SS-boY">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="231.33333333333334"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aSX-4I-ihN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="290" height="231.33333333333334"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBr-WK-GBq">
+                                                        <rect key="frame" x="298" y="0.0" width="100" height="231.33333333333334"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="VwH-Ho-ECI"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Cancel">
+                                                            <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="oneCancelButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Zq-HI-a5R"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cV7-TD-rfO">
+                                                <rect key="frame" x="0.0" y="239.33333333333331" width="398" height="231.33333333333331"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Nh-ex-sVE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="290" height="231.33333333333334"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P08-dE-wdY">
+                                                        <rect key="frame" x="298" y="0.0" width="100" height="231.33333333333334"/>
+                                                        <state key="normal" title="Cancel">
+                                                            <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="twoCancelButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3g8-tf-Bl7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fG2-9y-Oy2">
+                                                <rect key="frame" x="0.0" y="478.66666666666657" width="398" height="231.33333333333331"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K14-Tx-xg3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="290" height="231.33333333333334"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yF-A0-QDa">
+                                                        <rect key="frame" x="298" y="0.0" width="100" height="231.33333333333334"/>
+                                                        <state key="normal" title="Cancel">
+                                                            <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="threeCancelButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U4Y-p3-GUF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1Nh-ex-sVE" firstAttribute="height" secondItem="aSX-4I-ihN" secondAttribute="height" id="6eh-39-rMg"/>
+                                            <constraint firstItem="1Nh-ex-sVE" firstAttribute="width" secondItem="aSX-4I-ihN" secondAttribute="width" id="ErB-XL-s2z"/>
+                                            <constraint firstItem="K14-Tx-xg3" firstAttribute="width" secondItem="aSX-4I-ihN" secondAttribute="width" id="si1-D9-HXy"/>
+                                            <constraint firstItem="K14-Tx-xg3" firstAttribute="height" secondItem="aSX-4I-ihN" secondAttribute="height" id="y9C-Mo-Nxg"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF5-mP-kr9">
+                                        <rect key="frame" x="8" y="726" width="398" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="oEe-x3-lo2"/>
+                                        </constraints>
+                                        <state key="normal" title="Download All"/>
+                                        <connections>
+                                            <action selector="downloadAllButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xQf-lp-cCX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SgZ-W9-rmD">
+                                <rect key="frame" x="143" y="201.66666666666666" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9RE-9J-Ecr">
+                                <rect key="frame" x="143" y="441" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2Ep-gE-GU6">
+                                <rect key="frame" x="143" y="680.33333333333337" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9RE-9J-Ecr" firstAttribute="centerY" secondItem="1Nh-ex-sVE" secondAttribute="centerY" id="9Oo-Pv-bpw"/>
+                            <constraint firstItem="9RE-9J-Ecr" firstAttribute="centerX" secondItem="1Nh-ex-sVE" secondAttribute="centerX" id="9lJ-9V-xUS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NAD-Bv-KAQ" secondAttribute="trailing" id="G5q-o1-oKm"/>
+                            <constraint firstItem="NAD-Bv-KAQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GFn-s2-Ri4"/>
+                            <constraint firstItem="2Ep-gE-GU6" firstAttribute="centerY" secondItem="K14-Tx-xg3" secondAttribute="centerY" id="RIt-qm-Cur"/>
+                            <constraint firstItem="2Ep-gE-GU6" firstAttribute="centerX" secondItem="K14-Tx-xg3" secondAttribute="centerX" id="UUZ-aJ-vCN"/>
+                            <constraint firstItem="NAD-Bv-KAQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jhN-ei-0lp"/>
+                            <constraint firstItem="NAD-Bv-KAQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="keb-y6-4Bu"/>
+                            <constraint firstItem="SgZ-W9-rmD" firstAttribute="centerY" secondItem="aSX-4I-ihN" secondAttribute="centerY" id="qHm-Qe-IQW"/>
+                            <constraint firstItem="SgZ-W9-rmD" firstAttribute="centerX" secondItem="aSX-4I-ihN" secondAttribute="centerX" id="qh1-mw-JYI"/>
+                            <constraint firstItem="NAD-Bv-KAQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yam-oN-1wg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nJv-b8-vyH"/>
+                    <connections>
+                        <outlet property="firstActivityIndicator" destination="SgZ-W9-rmD" id="9ov-5W-xy3"/>
+                        <outlet property="oneImageView" destination="aSX-4I-ihN" id="zQV-wX-pBI"/>
+                        <outlet property="secondActivityIndicator" destination="9RE-9J-Ecr" id="Xnz-Jx-fsb"/>
+                        <outlet property="thirdActivityIndicator" destination="2Ep-gE-GU6" id="8AR-i9-J2N"/>
+                        <outlet property="threeImageView" destination="K14-Tx-xg3" id="cTE-YR-NwE"/>
+                        <outlet property="twoImageView" destination="1Nh-ex-sVE" id="e8S-Ym-Ngf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="18.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wu4-Qt-IoP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YQK-RK-aBx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XpY-Hs-wdZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NFZ-Ps-sOW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhp-14-r4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="19"/>
+        </scene>
+    </scenes>
+</document>

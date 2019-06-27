@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+inhibit_all_warnings!
+
+def shared_pods
+ pod 'Alamofire', '~> 4.8.2'
+ pod 'ReachabilitySwift', '~> 4.3.1'
+ pod 'SwiftyJSON', '~> 5.0.0'
+ pod 'Cacher', git: 'https://github.com/aashishtamsya/PinBoard', branch: 'master'
+end
+
+def testing_pods
+ pod 'Alamofire', '~> 4.8.2'
+ pod 'ReachabilitySwift', '~> 4.3.1'
+ pod 'SwiftyJSON', '~> 5.0.0'
+end
+
+target 'CacherExample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for CacherExample
+	shared_pods
+
+  target 'CacherExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+	testing_pods
+  end
+
+end

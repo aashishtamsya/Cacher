@@ -1,0 +1,6 @@
+framework module Pods_CacherExample {
+  umbrella header "Pods-CacherExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Cacher {
+  umbrella header "Cacher-umbrella.h"
+
+  export *
+  module * { export * }
+}
