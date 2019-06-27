@@ -55,10 +55,10 @@ extension PhotoCell {
   
   func cancelImageLoading() {
     if let photoURL = photoURL, let photoCancelToken = photoCancelToken {
-      photoImageView.cancelImageLoading(photoURL, cancelToken: photoCancelToken)
+      _ = photoImageView.cancelImageLoading(photoURL, cancelToken: photoCancelToken)
     }
     if let profileURL = profileURL, let profileCancelToken = profileCancelToken {
-      profileImageView.cancelImageLoading(profileURL, cancelToken: profileCancelToken)
+      _ = profileImageView.cancelImageLoading(profileURL, cancelToken: profileCancelToken)
     }
   }
 }

@@ -11,6 +11,12 @@
 		FD2F69AD22C0C41A003FD42D /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69AC22C0C41A003FD42D /* ImageTransition.swift */; };
 		FD2F69B022C0C5F0003FD42D /* UIImageViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69AF22C0C5F0003FD42D /* UIImageViewExtensionTests.swift */; };
 		FD2F69D722C0CCE4003FD42D /* CacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69D522C0CBB8003FD42D /* CacheType.swift */; };
+		FD96FC7722C5428000FC6329 /* CacheTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96FC7622C5428000FC6329 /* CacheTypeTests.swift */; };
+		FD96FC7922C5432A00FC6329 /* RequestTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96FC7822C5432A00FC6329 /* RequestTokenTests.swift */; };
+		FD96FC7B22C5455D00FC6329 /* DataExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96FC7A22C5455D00FC6329 /* DataExtensionTests.swift */; };
+		FD96FC7F22C546B000FC6329 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD96FC7E22C546B000FC6329 /* Media.xcassets */; };
+		FD96FC8122C5474400FC6329 /* ic_pattern_placeholder.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FD96FC8022C5474300FC6329 /* ic_pattern_placeholder.pdf */; };
+		FD96FC8322C5496D00FC6329 /* UIImageExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96FC8222C5496D00FC6329 /* UIImageExtensionTests.swift */; };
 		FDC9DDBD22C0980A00A56670 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDBC22C0980A00A56670 /* Cache.swift */; };
 		FDC9DDBF22C0985000A56670 /* Cachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDBE22C0985000A56670 /* Cachable.swift */; };
 		FDC9DDC122C098E400A56670 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DDC022C098E400A56670 /* MemoryCache.swift */; };
@@ -46,6 +52,12 @@
 		FD2F69AC22C0C41A003FD42D /* ImageTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
 		FD2F69AF22C0C5F0003FD42D /* UIImageViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensionTests.swift; sourceTree = "<group>"; };
 		FD2F69D522C0CBB8003FD42D /* CacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheType.swift; sourceTree = "<group>"; };
+		FD96FC7622C5428000FC6329 /* CacheTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTypeTests.swift; sourceTree = "<group>"; };
+		FD96FC7822C5432A00FC6329 /* RequestTokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenTests.swift; sourceTree = "<group>"; };
+		FD96FC7A22C5455D00FC6329 /* DataExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionTests.swift; sourceTree = "<group>"; };
+		FD96FC7E22C546B000FC6329 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		FD96FC8022C5474300FC6329 /* ic_pattern_placeholder.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ic_pattern_placeholder.pdf; sourceTree = "<group>"; };
+		FD96FC8222C5496D00FC6329 /* UIImageExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensionTests.swift; sourceTree = "<group>"; };
 		FDC9DDBC22C0980A00A56670 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		FDC9DDBE22C0985000A56670 /* Cachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
 		FDC9DDC022C098E400A56670 /* MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
@@ -100,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				FD2F69AF22C0C5F0003FD42D /* UIImageViewExtensionTests.swift */,
+				FD96FC8222C5496D00FC6329 /* UIImageExtensionTests.swift */,
+				FD96FC7A22C5455D00FC6329 /* DataExtensionTests.swift */,
 			);
 			path = ExtensionTests;
 			sourceTree = "<group>";
@@ -118,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC9DDC822C09B9700A56670 /* CacheTests.swift */,
+				FD96FC7622C5428000FC6329 /* CacheTypeTests.swift */,
 				FDD7533722C4F145000C146F /* JSONCacheTests.swift */,
 			);
 			path = CacheTests;
@@ -147,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC9DE0222C0B02D00A56670 /* NetworkTests.swift */,
+				FD96FC7822C5432A00FC6329 /* RequestTokenTests.swift */,
 			);
 			path = NetworkTests;
 			sourceTree = "<group>";
@@ -186,9 +202,11 @@
 			children = (
 				FDD7DE6D22BE0B680016639A /* Info.plist */,
 				FDD7DE6B22BE0B680016639A /* CacherTests.swift */,
+				FD96FC8022C5474300FC6329 /* ic_pattern_placeholder.pdf */,
 				FDC9DDC722C09B8500A56670 /* CacheTests */,
 				FD2F69AE22C0C5DA003FD42D /* ExtensionTests */,
 				FDC9DE0122C0B01200A56670 /* NetworkTests */,
+				FD96FC7E22C546B000FC6329 /* Media.xcassets */,
 			);
 			path = CacherTests;
 			sourceTree = "<group>";
@@ -317,6 +335,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD96FC7F22C546B000FC6329 /* Media.xcassets in Resources */,
+				FD96FC8122C5474400FC6329 /* ic_pattern_placeholder.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,9 +376,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC9DE0322C0B02D00A56670 /* NetworkTests.swift in Sources */,
+				FD96FC8322C5496D00FC6329 /* UIImageExtensionTests.swift in Sources */,
 				FDC9DDC922C09B9700A56670 /* CacheTests.swift in Sources */,
 				FDD7533822C4F145000C146F /* JSONCacheTests.swift in Sources */,
 				FD2F69B022C0C5F0003FD42D /* UIImageViewExtensionTests.swift in Sources */,
+				FD96FC7722C5428000FC6329 /* CacheTypeTests.swift in Sources */,
+				FD96FC7B22C5455D00FC6329 /* DataExtensionTests.swift in Sources */,
+				FD96FC7922C5432A00FC6329 /* RequestTokenTests.swift in Sources */,
 				FDD7DE6C22BE0B680016639A /* CacherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
