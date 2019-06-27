@@ -13,6 +13,7 @@ final class UnsplashViewController: UIViewController {
   @IBOutlet fileprivate weak var activityIndicator: UIActivityIndicatorView!
   
   fileprivate var dataSource: [Photo]?
+  fileprivate var refreshControl = UIRefreshControl()
   
   static func unsplashViewController() -> UnsplashViewController {
     return UIStoryboard(name: "Unsplash", bundle: nil).instantiateViewController(withIdentifier: "UnsplashViewController") as! UnsplashViewController
@@ -22,7 +23,19 @@ final class UnsplashViewController: UIViewController {
     super.viewDidLoad()
     navigationItem.title = "UnsplashTitle".localized
     tableView.register(UINib(nibName: "PhotoCell", bundle: nil), forCellReuseIdentifier: "PhotoCell")
-    fetchImages()
+    refreshControl.addTarget(self, action: #selector(UnsplashViewController.refresh), for: .valueChanged)
+    tableView.addSubview(refreshControl)
+    fetchImages(showActivityIndicator: dataSource == nil)
+  }
+}
+// MARK: - Selectors
+private extension UnsplashViewController {
+  @objc func refresh() {
+    dataSource = nil
+    refreshControl.beginRefreshing()
+    tableView.reloadData()
+    activityIndicator.startAnimating()
+    fetchImages(showActivityIndicator: dataSource == nil)
   }
 }
 // MARK: - UITableViewDataSource
@@ -45,15 +58,20 @@ extension UnsplashViewController: UITableViewDelegate {
 }
 // MARK: - Private Methods
 private extension UnsplashViewController {
-  func fetchImages() {
+  func fetchImages(showActivityIndicator: Bool = false) {
+    if showActivityIndicator {
+      activityIndicator.startAnimating()
+    }
     getUnsplashImagesAsync { [weak self] state in
       switch state {
       case .loading:
         self?.activityIndicator.startAnimating()
       case .failure(let error):
+        self?.refreshControl.endRefreshing()
         self?.activityIndicator.stopAnimating()
         print(error.errorMessage)
       case .success(let assets):
+        self?.refreshControl.endRefreshing()
         self?.activityIndicator.stopAnimating()
         self?.dataSource = assets
         self?.tableView.reloadData()

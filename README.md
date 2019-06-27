@@ -9,7 +9,7 @@ A framework to download and cache images from url.
  - [Trello Board](#trello-board)
  - [Demos](#demos)
  - [Unsplash Implmentation](#unsplash-implmentation)
- 
+ - [Pull to refresh](#pull-to-refresh)
  
 ### Trello Board
 
@@ -24,6 +24,10 @@ The following project has been excuted with the help of tracking task in [Trello
 ### One of the sources cancels the load, it should not affect the remaining requests
 
 ![One of the sources cancels the load, it should not affect the remaining requests](/Resources/Cancel_Not_Affect_Remaining.gif)
+
+### Pull to refresh
+
+![Pull to refresh](/Resources/Pull_To_Refresh.gif)
 
 ## Contributor
 
