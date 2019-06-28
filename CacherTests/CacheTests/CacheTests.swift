@@ -19,7 +19,7 @@ final class CacheTests: XCTestCase {
     }
     let expectation = self.expectation(description: "Testing caching of image from url and retrieving it back from cache.")
     let cache = Cacher.sharedCache
-    cache.store(to: .memory, key: key, object: image) {
+    cache.store((.memory, key), object: image) {
       cache.retrieve(from: .memory, key: key) { (image: UIImage?) in
         XCTAssert(image != nil, "no image")
         expectation.fulfill()
@@ -54,7 +54,7 @@ final class CacheTests: XCTestCase {
     }
     let expectation = self.expectation(description: "Testing caching of Image file from url and retrieving it back from cache.")
     let cache = Cacher.sharedCache
-    cache.store(to: .disk, key: key, object: image) {
+    cache.store((.disk, key), object: image) {
       cache.retrieve(from: .disk, key: key) { (data: Data?) in
         XCTAssert(data != nil, "no image file data")
         expectation.fulfill()
@@ -74,7 +74,7 @@ final class CacheTests: XCTestCase {
       let expectation = self.expectation(description: "Performance testing caching of image from url and retrieving it back from cache.")
       let cache = Cacher.sharedCache
       startMeasuring()
-      cache.store(to: .memory, key: key, object: image) {
+      cache.store((.memory, key), object: image) {
         cache.retrieve(from: .memory, key: key) { (image: UIImage?) in
           XCTAssert(image != nil, "no image")
           expectation.fulfill()
@@ -127,7 +127,7 @@ final class CacheTests: XCTestCase {
         return
     }
     let cache = Cacher.sharedCache
-    cache.store(to: .memory, key: key, object: image) {
+    cache.store((.memory, key), object: image) {
       cache.removeAll()
       cache.retrieve(from: .memory, key: key, { (object: UIImage?) in
         XCTAssert(object == nil, "Cache not cleared.")

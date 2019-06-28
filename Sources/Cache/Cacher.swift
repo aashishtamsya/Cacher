@@ -23,12 +23,12 @@ public class Cacher {
 }
 // MARK: - Cache
 extension Cacher: Cache {
-  public func store<T>(to: CacheType, key: String, object: T, _ completion: (() -> Void)?) where T: Cachable {
-    switch to {
+  public func store<T>(_ setting: (to: CacheType, key: String), object: T, _ completion: (() -> Void)?) where T: Cachable {
+    switch setting.to {
     case .disk:
-      diskCache.store(key: key, object: object, completion)
+      diskCache.store(key: setting.key, object: object, completion)
     case .memory:
-      memoryCache.store(key: key, object: object, completion)
+      memoryCache.store(key: setting.key, object: object, completion)
     case .none:
       completion?()
     }

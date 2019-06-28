@@ -19,7 +19,7 @@ final class JSONCacheTests: XCTestCase {
     }
     let expectation = self.expectation(description: "Testing caching of JSON file from url and retrieving it back from cache.")
     let cache = Cacher.sharedCache
-    cache.store(to: .memory, key: key, object: jsonData) {
+    cache.store((.memory, key), object: jsonData) {
       cache.retrieve(from: .memory, key: key) { (data: Data?) in
         XCTAssert(data != nil, "no json file data")
         expectation.fulfill()
@@ -37,7 +37,7 @@ final class JSONCacheTests: XCTestCase {
     }
     let expectation = self.expectation(description: "Testing caching of JSON file from url and retrieving it back from cache.")
     let cache = Cacher.sharedCache
-    cache.store(to: .disk, key: key, object: jsonData) {
+    cache.store((.disk, key), object: jsonData) {
       cache.retrieve(from: .disk, key: key) { (data: Data?) in
         XCTAssert(data != nil, "no json file data")
         expectation.fulfill()
