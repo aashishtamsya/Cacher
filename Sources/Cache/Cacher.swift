@@ -73,63 +73,60 @@ extension Cacher: Download {
       completion(nil, .none)
       return nil
     }
-    var token: RequestToken?
     switch type {
     case .none:
       return nil
     case .disk:
-      diskCache.retrieve(key: key) { (object: Data?) in
-        if let data = object {
-          completion(data as? T, .disk)
-        } else {
-          let task = self.session.dataTask(with: url) { [weak self] data, _, _ in
-            guard let strongSelf = self, let data = data else {
-              completion(nil, .none)
-              return
-            }
-            strongSelf.memoryCache.store(key: url.absoluteString, object: data) {
-              completion(data as? T, .none)
-            }
-          }
-          task.resume()
-          let requestToken = RequestToken(task)
-          taskPool[task] = url
-          token = requestToken
-        }
-      }
+      return downloadToDisk(url, key: key, completion: completion)
     case .memory:
-      memoryCache.retrieve(key: key) { (object: Data?) in
-        if let data = object {
-          completion(data as? T, .memory)
-        } else {
-          let task = self.session.dataTask(with: url) { [weak self] data, _, _ in
-            guard let strongSelf = self, let data = data else {
-              completion(nil, .none)
-              return
-            }
-            strongSelf.memoryCache.store(key: url.absoluteString, object: data) {
-              completion(data as? T, .none)
-            }
-          }
-          task.resume()
-          let requestToken = RequestToken(task)
-          taskPool[task] = url
-          token = requestToken
-        }
-      }
+      return downloadToMemory(url, key: key, completion: completion)
     }
-    return token
   }
-  
-//  public func download<T>(url: URL, completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
-//
-//
-//  }
   
   public func cancel(_ url: URL, token: RequestToken? = nil) -> Bool {
     guard let task = token?.task, let cancelToken = taskPool.filter({ $0.key == task && $0.value == url }).first?.key else { return false }
     cancelToken.cancel()
     taskPool.removeValue(forKey: cancelToken)
     return true
+  }
+}
+
+private extension Cacher {
+  func downloadToMemory<T>(_ url: URL, key: String, completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
+    var token: RequestToken?
+    memoryCache.retrieve(key: key) { [weak self] (object: Data?) in
+      token = self?.process(object: object, url: url, completion)
+    }
+    return token
+  }
+  
+  func downloadToDisk<T>(_ url: URL, key: String, completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
+    var token: RequestToken?
+    diskCache.retrieve(key: key) { [weak self] (object: Data?) in
+      token = self?.process(object: object, url: url, completion)
+    }
+    return token
+  }
+  
+  func process<T>(object: Data?, url: URL, _ completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
+    var token: RequestToken?
+    if let data = object {
+      completion(data as? T, .disk)
+    } else {
+      let task = self.session.dataTask(with: url) { [weak self] data, _, _ in
+        guard let strongSelf = self, let data = data else {
+          completion(nil, .none)
+          return
+        }
+        strongSelf.memoryCache.store(key: url.absoluteString, object: data) {
+          completion(data as? T, .none)
+        }
+      }
+      task.resume()
+      let requestToken = RequestToken(task)
+      taskPool[task] = url
+      token = requestToken
+    }
+    return token
   }
 }
