@@ -4,7 +4,7 @@
   "summary": "Image downloading and caching framework. Also support downloading files such as JSON.",
   "swift_versions": "5.0",
   "description": "Pinboard is an image downloading and caching framework. Also support downloading files such as JSON. The frame downloads and cache the image from different urls on iOS allowing user to have a smooth user experience.",
-  "homepage": "https://github.com/aashishtamsya/PinBoard",
+  "homepage": "https://github.com/aashishtamsya/Cacher",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -16,7 +16,7 @@
     "ios": "10.0"
   },
   "source": {
-    "git": "https://github.com/aashishtamsya/PinBoard.git",
+    "git": "https://github.com/aashishtamsya/Cacher.git",
     "tag": "0.0.3"
   },
   "source_files": [

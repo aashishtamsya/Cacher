@@ -50,4 +50,53 @@ final class CacheTests: XCTestCase {
       })
     }
   }
+  
+  func test_cacher_download_onMemoryCache() {
+    guard let imageURL = URL(string: "http://s75.mindvalley.us/mindvalleyacademy/media/images/teaser-video-cover.jpg") else {
+      XCTAssert(false, "no image at url")
+      return
+    }
+    let cache = Cacher.sharedCache
+    _ = cache.download(cacheType: .memory, url: imageURL) { (object: Data?, _) in
+      XCTAssert(object != nil, "no data found")
+    }
+  }
+  
+  func test_cacher_download_onDisk() {
+    guard let imageURL = URL(string: "http://s75.mindvalley.us/mindvalleyacademy/media/images/teaser-video-cover.jpg") else {
+      XCTAssert(false, "no image at url")
+      return
+    }
+    let cache = Cacher.sharedCache
+    _ = cache.download(cacheType: .disk, url: imageURL) { (object: Data?, _) in
+      XCTAssert(object != nil, "no data found")
+    }
+  }
+  
+  func test_cacher_download_cancel() {
+    guard let imageURL = URL(string: "http://s75.mindvalley.us/mindvalleyacademy/media/images/teaser-video-cover.jpg") else {
+      XCTAssert(false, "no image at url")
+      return
+    }
+    let cache = Cacher.sharedCache
+    let token = cache.download(cacheType: .memory, url: imageURL) { (object: Data?, _) in
+    }
+    XCTAssert(cache.cancel(imageURL, token: token), "Cancel Error")
+  }
+  
+  func test_cacher_memory_removeAll() {
+    guard let imageURL = URL(string: "http://s75.mindvalley.us/mindvalleyacademy/media/images/teaser-video-cover.jpg"),
+      let image = try? UIImage(data: Data(contentsOf: imageURL)),
+      let key = imageURL.key else {
+        XCTAssert(false, "no image at url")
+        return
+    }
+    let cache = Cacher.sharedCache
+    cache.store(to: .memory, key: key, object: image) {
+      cache.removeAll()
+      cache.retrieve(from: .memory, key: key, { (object: UIImage?) in
+        XCTAssert(object == nil, "Cache not cleared.")
+      })
+    }
+  }
 }

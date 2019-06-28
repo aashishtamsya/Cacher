@@ -49,7 +49,7 @@ private extension ViewController {
   
   @IBAction func cancelButtonSelected(_ sender: UIButton) {
     guard let url = URL(string: "https://cdn.pixabay.com/photo/2018/06/11/17/02/flower-3468846_960_720.jpg") else { return }
-    downloadImageView.cancelImageLoading(url)
+    _ = downloadImageView.cancelImageLoading(url)
     downloadActivityIndicator.stopAnimating()
   }
   

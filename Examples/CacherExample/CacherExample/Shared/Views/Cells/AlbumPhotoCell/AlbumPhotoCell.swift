@@ -43,7 +43,7 @@ extension AlbumPhotoCell {
   
   func cancelLoading() {
     guard let url = url, let cancelToken = cancelToken else { return }
-    photoImageView.cancelImageLoading(url, cancelToken: cancelToken)
+    _ = photoImageView.cancelImageLoading(url, cancelToken: cancelToken)
   }
 }
 // MARK: - Private Methods

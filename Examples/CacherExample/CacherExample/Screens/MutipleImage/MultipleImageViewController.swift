@@ -59,16 +59,16 @@ private extension MultipleImageViewController {
   @IBAction func oneCancelButtonSelected(_ sender: UIButton) {
     guard let url = url, let oneRequestToken = oneRequestToken else { return }
     firstActivityIndicator.stopAnimating()
-    oneImageView.cancelImageLoading(url, cancelToken: oneRequestToken)
+    _ = oneImageView.cancelImageLoading(url, cancelToken: oneRequestToken)
   }
   @IBAction func twoCancelButtonSelected(_ sender: UIButton) {
     guard let url = url, let twoRequestToken = twoRequestToken else { return }
     secondActivityIndicator.stopAnimating()
-    twoImageView.cancelImageLoading(url, cancelToken: twoRequestToken)
+    _ = twoImageView.cancelImageLoading(url, cancelToken: twoRequestToken)
   }
   @IBAction func threeCancelButtonSelected(_ sender: UIButton) {
     guard let url = url, let threeRequestToken = threeRequestToken else { return }
     thirdActivityIndicator.stopAnimating()
-    threeImageView.cancelImageLoading(url, cancelToken: threeRequestToken)
+    _ = threeImageView.cancelImageLoading(url, cancelToken: threeRequestToken)
   }
 }

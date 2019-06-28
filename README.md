@@ -1,4 +1,4 @@
-# PinBoard
+# Cacher
 
 [![Build Status](https://travis-ci.org/aashishtamsya/MindValley-Challenge.svg?branch=develop)](https://travis-ci.org/aashishtamsya/MindValley-Challenge)
 
@@ -47,4 +47,4 @@ The following project has been excuted with the help of tracking task in [Trello
 
 ## License
 
-PinBoard is released under the MIT license. See LICENSE for details.
+Cacher is released under the MIT license. See LICENSE for details.
