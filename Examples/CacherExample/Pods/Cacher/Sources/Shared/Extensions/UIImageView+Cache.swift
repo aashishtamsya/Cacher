@@ -62,7 +62,7 @@ extension UIImageView {
     })
   }
   
-  public func cancelImageLoading(_ url: URL, cancelToken: RequestToken? = nil) {
-    Cacher.sharedCache.cancel(url, token: cancelToken)
+  public func cancelImageLoading(_ url: URL, cancelToken: RequestToken? = nil) -> Bool {
+    return Cacher.sharedCache.cancel(url, token: cancelToken)
   }
 }

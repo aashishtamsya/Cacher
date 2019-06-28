@@ -1,6 +1,6 @@
 # Cacher
 
-[![Build Status](https://travis-ci.org/aashishtamsya/MindValley-Challenge.svg?branch=develop)](https://travis-ci.org/aashishtamsya/MindValley-Challenge)
+<a href="https://travis-ci.org/aashishtamsya/Cacher"><img src="https://img.shields.io/travis/aashishtamsya/Cacher/master.svg"></a>
 
 A framework to download and cache images from url.
 

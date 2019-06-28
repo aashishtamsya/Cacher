@@ -46,7 +46,7 @@ extension Cacher: Cache {
           return
         }
       }
-
+      
     case .memory:
       memoryCache.retrieve(key: key) { (object: T?) in
         if let object = object {
@@ -64,6 +64,7 @@ extension Cacher: Cache {
   
   public func removeAll() {
     memoryCache.removeAll()
+    taskPool.removeAll()
   }
 }
 
@@ -79,11 +80,11 @@ extension Cacher: Download {
       return nil
     case .disk:
       diskCache.retrieve(key: key) { [weak self] (object: Data?) in
-        token = self?.process(object: object, url: url, type: .disk, completion)
+        token = self?.process(retrievedObject: object, url: url, type: .disk, completion)
       }
     case .memory:
       memoryCache.retrieve(key: key) { [weak self] (object: Data?) in
-        token = self?.process(object: object, url: url, type: .memory, completion)
+        token = self?.process(retrievedObject: object, url: url, type: .memory, completion)
       }
     }
     return token
@@ -98,13 +99,13 @@ extension Cacher: Download {
 }
 
 private extension Cacher {
-  func process<T>(object: Data?, url: URL, type: CacheType, _ completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
+  func process<T>(retrievedObject object: Data?, url: URL, type: CacheType, _ completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
     var token: RequestToken?
     if let data = object {
-      completion(data as? T, .disk)
+      completion(data as? T, type)
     } else {
       let task = self.session.dataTask(with: url) { [weak self] data, _, _ in
-        self?.store(data, on: type, key: url.absoluteString, completion)
+        self?.storeInCache(CacheSettings(type: type, url: url, object: data, image: nil), completion)
       }
       task.resume()
       let requestToken = RequestToken(task)
@@ -114,20 +115,16 @@ private extension Cacher {
     return token
   }
   
-  func store<T>(_ object: Data?, on type: CacheType, key: String, _ completion: @escaping (T?, CacheType) -> Void) where T: Cachable {
-    guard let data = object else {
+  func storeInCache<T>(_ settings: CacheSettings?, _ completion: @escaping (T?, CacheType) -> Void) where T: Cachable {
+    guard let data = settings?.object, let key = settings?.url?.key, let type = settings?.type else {
       completion(nil, .none)
       return
     }
     switch type {
     case .disk:
-      diskCache.store(key: key, object: data) {
-        completion(data as? T, .none)
-      }
+      diskCache.store(key: key, object: data) { completion(data as? T, .none) }
     case .memory:
-      memoryCache.store(key: key, object: data) {
-        completion(data as? T, .none)
-      }
+      memoryCache.store(key: key, object: data) { completion(data as? T, .none) }
     case .none:
       completion(data as? T, .none)
     }

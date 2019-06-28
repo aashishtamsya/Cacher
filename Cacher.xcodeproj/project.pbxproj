@@ -11,6 +11,7 @@
 		FD2F69AD22C0C41A003FD42D /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69AC22C0C41A003FD42D /* ImageTransition.swift */; };
 		FD2F69B022C0C5F0003FD42D /* UIImageViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69AF22C0C5F0003FD42D /* UIImageViewExtensionTests.swift */; };
 		FD2F69D722C0CCE4003FD42D /* CacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F69D522C0CBB8003FD42D /* CacheType.swift */; };
+		FD823C1722C5FD8C006C0BAA /* CacheSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD823C1622C5FD8C006C0BAA /* CacheSettings.swift */; };
 		FD96FC7722C5428000FC6329 /* CacheTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96FC7622C5428000FC6329 /* CacheTypeTests.swift */; };
 		FD96FC7922C5432A00FC6329 /* RequestTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96FC7822C5432A00FC6329 /* RequestTokenTests.swift */; };
 		FD96FC7B22C5455D00FC6329 /* DataExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96FC7A22C5455D00FC6329 /* DataExtensionTests.swift */; };
@@ -52,6 +53,7 @@
 		FD2F69AC22C0C41A003FD42D /* ImageTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
 		FD2F69AF22C0C5F0003FD42D /* UIImageViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensionTests.swift; sourceTree = "<group>"; };
 		FD2F69D522C0CBB8003FD42D /* CacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheType.swift; sourceTree = "<group>"; };
+		FD823C1622C5FD8C006C0BAA /* CacheSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheSettings.swift; sourceTree = "<group>"; };
 		FD96FC7622C5428000FC6329 /* CacheTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTypeTests.swift; sourceTree = "<group>"; };
 		FD96FC7822C5432A00FC6329 /* RequestTokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenTests.swift; sourceTree = "<group>"; };
 		FD96FC7A22C5455D00FC6329 /* DataExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionTests.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC9DDC322C099EE00A56670 /* Cacher.swift */,
+				FD823C1622C5FD8C006C0BAA /* CacheSettings.swift */,
 				FDD7531422C4E170000C146F /* CacheTypes */,
 				FDD7531522C4E183000C146F /* Protocols */,
 			);
@@ -394,6 +397,7 @@
 				FDC9DDC122C098E400A56670 /* MemoryCache.swift in Sources */,
 				FD2F69AD22C0C41A003FD42D /* ImageTransition.swift in Sources */,
 				FD2F69D722C0CCE4003FD42D /* CacheType.swift in Sources */,
+				FD823C1722C5FD8C006C0BAA /* CacheSettings.swift in Sources */,
 				FDC9DDC422C099EE00A56670 /* Cacher.swift in Sources */,
 				FDC9DDBF22C0985000A56670 /* Cachable.swift in Sources */,
 				FDD7531A22C4E440000C146F /* DiskCachable.swift in Sources */,
