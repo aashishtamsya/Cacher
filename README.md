@@ -1,7 +1,7 @@
 # Cacher
 
 <a href="https://travis-ci.org/aashishtamsya/Cacher"><img src="https://img.shields.io/travis/aashishtamsya/Cacher/master.svg"></a>
-<a href="https://codebeat.co/projects/github-com-aashishtamsya-cacher><img alt="codebeat badge" src="https://codebeat.co/assets/svg/badges/A-398b39-669406e9e1b136187b91af587d4092b0160370f271f66a651f444b990c2730e9.svg" /></a>
+<a href="https://codebeat.co/projects/github-com-aashishtamsya-cacher"><img alt="codebeat badge" src="https://codebeat.co/assets/svg/badges/A-398b39-669406e9e1b136187b91af587d4092b0160370f271f66a651f444b990c2730e9.svg" /></a>
 
 A framework to download and cache images from url.
 
