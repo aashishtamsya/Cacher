@@ -63,11 +63,11 @@ extension Cacher: Downloadable {
       return nil
     case .disk:
       diskCache.retrieve(key: key) { [weak self] (object: Data?) in
-        token = self?.process(retrievedObject: object, url: url, type: .disk, completion)
+        token = self?.process(retrievedObject: object, configuration: (url, .disk), completion)
       }
     case .memory:
       memoryCache.retrieve(key: key) { [weak self] (object: Data?) in
-        token = self?.process(retrievedObject: object, url: url, type: .memory, completion)
+        token = self?.process(retrievedObject: object, configuration: (url, .memory), completion)
       }
     }
     return token
@@ -82,20 +82,17 @@ extension Cacher: Downloadable {
 }
 // MARK: - Private Methods
 private extension Cacher {
-  func process<T>(retrievedObject object: Data?, url: URL, type: CacheType, _ completion: @escaping (T?, CacheType) -> Void) -> CancelToken? where T: Cachable {
-    var token: CancelToken?
-    if let data = object {
-      completion(data as? T, type)
-    } else {
-      let task = self.session.dataTask(with: url) { [weak self] data, _, _ in
-        self?.storeInCache(CacheSettings(type: type, url: url, object: data, image: nil), completion)
-      }
-      task.resume()
-      let cancelToken = CancelToken(task)
-      taskPool[task] = url
-      token = cancelToken
+  func process<T>(retrievedObject object: Data?, configuration: (url: URL, type: CacheType), _ completion: @escaping (T?, CacheType) -> Void) -> CancelToken? where T: Cachable {
+    guard object == nil else {
+      completion(object as? T, configuration.type)
+      return nil
     }
-    return token
+    let task = self.session.dataTask(with: configuration.url) { [weak self] data, _, _ in
+      self?.storeInCache(CacheSettings(type: configuration.type, url: configuration.url, object: data, image: nil), completion)
+    }
+    task.resume()
+    taskPool[task] = configuration.url
+    return CancelToken(task)
   }
   
   func storeInCache<T>(_ settings: CacheSettings?, _ completion: @escaping (T?, CacheType) -> Void) where T: Cachable {
