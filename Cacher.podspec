@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "Cacher"
-  spec.version      = "0.0.6"
+  spec.version      = "0.1.1"
   spec.summary      = "Image downloading and caching framework. Also support downloading files such as JSON."
   spec.swift_version = '5.0'
 	

@@ -1,8 +1,13 @@
+![Cacher](/Resources/cover.png "Cacher")
+
 # Cacher
 
 <a href="https://travis-ci.org/aashishtamsya/Cacher"><img src="https://img.shields.io/travis/aashishtamsya/Cacher/master.svg"></a>
+<a href="https://raw.githubusercontent.com/aashishtamsya/Cacher/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/Kingfisher.svg?style=flat"></a>
+<a href="https://github.com/aashishtamsya/Cacher"><img src="https://img.shields.io/cocoapods/p/Cacher.svg"></a>
+<a href="https://codebeat.co/projects/github-com-aashishtamsya-cacher-master"><img alt="codebeat badge" src="https://codebeat.co/assets/svg/badges/A-398b39-669406e9e1b136187b91af587d4092b0160370f271f66a651f444b990c2730e9.svg" /></a>
 
-A framework to download and cache images from url.
+Cacher is an image downloading and caching framework. Also support downloading files such as JSON. The frame downloads and cache the image from different urls on iOS allowing user to have a smooth user experience.
 
 ## Table of Content.
 
@@ -24,6 +29,9 @@ A framework to download and cache images from url.
 
 The following project has been excuted with the help of tracking task in [Trello Board](https://trello.com/b/MILJtosG). Agile approach was used to develop the project.
 
+[CodeBeat Report](https://codebeat.co/projects/github-com-aashishtamsya-cacher-develop)
+
+
 
 ## Unsplash Implmentation
 
@@ -40,6 +48,7 @@ The following project has been excuted with the help of tracking task in [Trello
 ## Pull to refresh
 
 ![Pull to refresh](/Resources/Pull_To_Refresh.gif)
+
 
 ## Contributor
 

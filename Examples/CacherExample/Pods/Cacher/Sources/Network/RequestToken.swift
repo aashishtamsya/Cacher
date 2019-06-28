@@ -14,12 +14,15 @@ public class RequestToken: Hashable {
   public func hash(into hasher: inout Hasher) {
     hasher.combine(task.hashValue)
   }
+  
   init(_ task: URLSessionDataTask) {
     self.task = task
   }
   
-  func cancel() {
-    task?.cancel()
+  func cancel() -> Bool {
+    guard let task = task else { return false }
+    task.cancel()
+    return true
   }
 }
 extension RequestToken: Equatable {

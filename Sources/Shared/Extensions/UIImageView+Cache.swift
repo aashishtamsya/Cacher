@@ -9,35 +9,32 @@
 import Foundation
 
 extension UIImageView {
-  public func loadImage(withURL url: URL, placeholder: UIImage? = nil, transition: ImageTransition? = .none, completion: ((UIImage?) -> Void)? = nil) -> RequestToken? {
-    let cache = Cacher.sharedCache
-    let token = cache.download(cacheType: .memory, url: url) { (object: Data?, cacheType: CacheType) in
-      if let data = object, let image = UIImage(data: data) {
-        guard self.requiresTransition(transition: transition ?? .none, cacheType: cacheType) else {
-          DispatchQueue.main.async {
-            self.image = image
-            completion?(image)
-          }
-          return
-        }
-        if let transition = transition {
-          self.performTransition(image: image, transition: transition, done: {
-            completion?(image)
-          })
-        } else {
-          DispatchQueue.main.async {
-            self.image = image
-            completion?(image)
-          }
-        }
+  public func loadImage(withURL url: URL, placeholder: UIImage? = nil, transition: ImageTransition? = .none, completion: ((UIImage?) -> Void)? = nil) -> CancelToken? {
+    let token = Cacher.sharedCache.download(cacheType: .memory, url: url) { [weak self] (object: Data?, cacheType: CacheType) in
+      guard let data = object, let image = UIImage(data: data) else {
+        self?.set(placeholder, completion)
+        return
+      }
+      guard let strongSelf = self, strongSelf.requiresTransition(transition: transition ?? .none, cacheType: cacheType) else {
+        self?.set(image, completion)
+        return
+      }
+      if let transition = transition {
+        self?.performTransition(image: image, transition: transition, done: {
+          completion?(image)
+        })
       } else {
-        DispatchQueue.main.async {
-          self.image = placeholder
-          completion?(nil)
-        }
+        self?.set(image, completion)
       }
     }
     return token
+  }
+  
+  private func set(_ image: UIImage?, _ completion: ((UIImage?) -> Void)? = nil) {
+    DispatchQueue.main.async {
+      self.image = image
+      completion?(image)
+    }
   }
   
   private func requiresTransition(transition: ImageTransition, cacheType: CacheType) -> Bool {
@@ -62,7 +59,7 @@ extension UIImageView {
     })
   }
   
-  public func cancelImageLoading(_ url: URL, cancelToken: RequestToken? = nil) -> Bool {
+  public func cancelImageLoading(_ url: URL, cancelToken: CancelToken? = nil) -> Bool {
     return Cacher.sharedCache.cancel(url, token: cancelToken)
   }
 }

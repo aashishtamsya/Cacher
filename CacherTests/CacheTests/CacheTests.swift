@@ -10,7 +10,7 @@ import XCTest
 @testable import Cacher
 
 final class CacheTests: XCTestCase {
-  func test_imageURL_caching() {
+  func test_imageURL_caching_onMemory() {
     guard let imageURL = URL(string: "http://s75.mindvalley.us/mindvalleyacademy/media/images/teaser-video-cover.jpg"),
       let image = try? UIImage(data: Data(contentsOf: imageURL)),
       let key = imageURL.key else {
@@ -19,7 +19,7 @@ final class CacheTests: XCTestCase {
     }
     let expectation = self.expectation(description: "Testing caching of image from url and retrieving it back from cache.")
     let cache = Cacher.sharedCache
-    cache.store(to: .memory, key: key, object: image) {
+    cache.store((.memory, key), object: image) {
       cache.retrieve(from: .memory, key: key) { (image: UIImage?) in
         XCTAssert(image != nil, "no image")
         expectation.fulfill()
@@ -28,7 +28,42 @@ final class CacheTests: XCTestCase {
     waitForExpectations(timeout: 60, handler: nil)
   }
   
-  func test_performance_imageURL_caching() {
+  func test_imageURL_caching_onDisk() {
+    guard let imageURL = URL(string: "http://s75.mindvalley.us/mindvalleyacademy/media/images/teaser-video-cover.jpg"),
+      let key = imageURL.key else {
+        XCTAssert(false, "no json file at url")
+        return
+    }
+    let expectation = self.expectation(description: "Testing caching of Image file from url and retrieving it back from cache.")
+    let cache = Cacher.sharedCache
+    _ = cache.download(cacheType: .disk, url: imageURL) { (object: Data?, cacheType) in
+      cache.retrieve(from: .disk, key: key) { (data: Data?) in
+        XCTAssert(data != nil, "no image file data")
+        expectation.fulfill()
+      }
+    }
+    waitForExpectations(timeout: 60, handler: nil)
+  }
+  
+  func test_disk_store() {
+    guard let imageURL = URL(string: "http://s75.mindvalley.us/mindvalleyacademy/media/images/teaser-video-cover.jpg"),
+      let image = try? UIImage(data: Data(contentsOf: imageURL)),
+      let key = imageURL.key else {
+        XCTAssert(false, "no json file at url")
+        return
+    }
+    let expectation = self.expectation(description: "Testing caching of Image file from url and retrieving it back from cache.")
+    let cache = Cacher.sharedCache
+    cache.store((.disk, key), object: image) {
+      cache.retrieve(from: .disk, key: key) { (data: Data?) in
+        XCTAssert(data != nil, "no image file data")
+        expectation.fulfill()
+      }
+    }
+    waitForExpectations(timeout: 60, handler: nil)
+  }
+  
+  func test_performance_imageURL_caching_onMemory() {
     measureMetrics([.wallClockTime], automaticallyStartMeasuring: false) {
       guard let imageURL = URL(string: "http://s75.mindvalley.us/mindvalleyacademy/media/images/teaser-video-cover.jpg"),
         let image = try? UIImage(data: Data(contentsOf: imageURL)),
@@ -39,7 +74,7 @@ final class CacheTests: XCTestCase {
       let expectation = self.expectation(description: "Performance testing caching of image from url and retrieving it back from cache.")
       let cache = Cacher.sharedCache
       startMeasuring()
-      cache.store(to: .memory, key: key, object: image) {
+      cache.store((.memory, key), object: image) {
         cache.retrieve(from: .memory, key: key) { (image: UIImage?) in
           XCTAssert(image != nil, "no image")
           expectation.fulfill()
@@ -92,7 +127,7 @@ final class CacheTests: XCTestCase {
         return
     }
     let cache = Cacher.sharedCache
-    cache.store(to: .memory, key: key, object: image) {
+    cache.store((.memory, key), object: image) {
       cache.removeAll()
       cache.retrieve(from: .memory, key: key, { (object: UIImage?) in
         XCTAssert(object == nil, "Cache not cleared.")

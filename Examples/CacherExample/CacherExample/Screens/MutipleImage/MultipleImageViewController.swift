@@ -23,9 +23,9 @@ final class MultipleImageViewController: UIViewController {
       return url
     }
   }
-  fileprivate var oneRequestToken: RequestToken?
-  fileprivate var twoRequestToken: RequestToken?
-  fileprivate var threeRequestToken: RequestToken?
+  fileprivate var oneCancelToken: CancelToken?
+  fileprivate var twoCancelToken: CancelToken?
+  fileprivate var threeCancelToken: CancelToken?
 
   
   static func MultipleImageViewController() -> MultipleImageViewController {
@@ -38,36 +38,36 @@ private extension MultipleImageViewController {
   @IBAction func downloadAllButtonSelected(_ sender: UIButton) {
     guard let url = url else { return }
     firstActivityIndicator.startAnimating()
-    oneRequestToken = oneImageView.loadImage(withURL: url, transition: .fade(0.5)) { [weak self] _ in
+    oneCancelToken = oneImageView.loadImage(withURL: url, transition: .fade(0.5)) { [weak self] _ in
       DispatchQueue.main.async {
         self?.firstActivityIndicator.stopAnimating()
       }
     }
     secondActivityIndicator.startAnimating()
-    twoRequestToken = twoImageView.loadImage(withURL: url, transition: .fade(0.5)) { [weak self] _ in
+    twoCancelToken = twoImageView.loadImage(withURL: url, transition: .fade(0.5)) { [weak self] _ in
       DispatchQueue.main.async {
         self?.secondActivityIndicator.stopAnimating()
       }
     }
     thirdActivityIndicator.startAnimating()
-    threeRequestToken = threeImageView.loadImage(withURL: url, transition: .fade(0.5)) { [weak self] _ in
+    threeCancelToken = threeImageView.loadImage(withURL: url, transition: .fade(0.5)) { [weak self] _ in
       DispatchQueue.main.async {
         self?.thirdActivityIndicator.stopAnimating()
       }
     }
   }
   @IBAction func oneCancelButtonSelected(_ sender: UIButton) {
-    guard let url = url, let oneRequestToken = oneRequestToken else { return }
+    guard let url = url, let oneRequestToken = oneCancelToken else { return }
     firstActivityIndicator.stopAnimating()
     _ = oneImageView.cancelImageLoading(url, cancelToken: oneRequestToken)
   }
   @IBAction func twoCancelButtonSelected(_ sender: UIButton) {
-    guard let url = url, let twoRequestToken = twoRequestToken else { return }
+    guard let url = url, let twoRequestToken = twoCancelToken else { return }
     secondActivityIndicator.stopAnimating()
     _ = twoImageView.cancelImageLoading(url, cancelToken: twoRequestToken)
   }
   @IBAction func threeCancelButtonSelected(_ sender: UIButton) {
-    guard let url = url, let threeRequestToken = threeRequestToken else { return }
+    guard let url = url, let threeRequestToken = threeCancelToken else { return }
     thirdActivityIndicator.stopAnimating()
     _ = threeImageView.cancelImageLoading(url, cancelToken: threeRequestToken)
   }

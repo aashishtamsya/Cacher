@@ -68,7 +68,7 @@ extension Cacher: Cache {
 }
 
 extension Cacher: Download {
-  public func download<T>(cacheType type: CacheType, url: URL, completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T : Cachable {
+  public func download<T>(cacheType type: CacheType, url: URL, completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
     guard let key = url.key else {
       completion(nil, .none)
       return nil
@@ -126,9 +126,10 @@ extension Cacher: Download {
 //
 //  }
   
-  public func cancel(_ url: URL, token: RequestToken? = nil) {
-    guard let task = token?.task, let cancelToken = taskPool.filter({ $0.key == task && $0.value == url }).first?.key else { return }
+  public func cancel(_ url: URL, token: RequestToken? = nil) -> Bool {
+    guard let task = token?.task, let cancelToken = taskPool.filter({ $0.key == task && $0.value == url }).first?.key else { return false }
     cancelToken.cancel()
     taskPool.removeValue(forKey: cancelToken)
+    return true
   }
 }

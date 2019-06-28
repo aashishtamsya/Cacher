@@ -11,14 +11,15 @@ import XCTest
 
 final class NetworkTests: XCTestCase {
   func test_image_downloading_caching() {
-    guard let imageURL = URL(string: "https://blog.hubspot.com/hubfs/image8-2.jpg") else {
-      XCTAssert(false, "no image at url")
-      return
+    guard let imageURL = URL(string: "https://blog.hubspot.com/hubfs/image8-2.jpg"),
+      let key = imageURL.key else {
+        XCTAssert(false, "no image at url")
+        return
     }
     let expectation = self.expectation(description: "Testing of downloading image and cache it.")
     let cache = Cacher.sharedCache
     _ = cache.download(cacheType: .memory, url: imageURL) { (object: Data?, _)  in
-      cache.retrieve(from: .memory, key: imageURL.absoluteString) { (data: Data?) in
+      cache.retrieve(from: .memory, key: key) { (data: Data?) in
         if let data = data {
           let image = UIImage(data: data)
           XCTAssert(image != nil, "no image in cache.")
@@ -33,15 +34,16 @@ final class NetworkTests: XCTestCase {
   
   func test_performance_image_downloading_caching() {
     measureMetrics([.wallClockTime], automaticallyStartMeasuring: false) {
-      guard let url = URL(string: "https://cdn.pixabay.com/photo/2016/09/01/10/23/image-1635747_960_720.jpg") else {
-        XCTAssert(false)
-        return
+      guard let url = URL(string: "https://cdn.pixabay.com/photo/2016/09/01/10/23/image-1635747_960_720.jpg"),
+        let key = url.key else {
+          XCTAssert(false)
+          return
       }
       let cache = Cacher.sharedCache
       let expectation = self.expectation(description: "Performance testing of downloading image and cache it.")
       startMeasuring()
       _ = cache.download(cacheType: .memory, url: url) { (object: Data?, _) in
-        cache.retrieve(from: .memory, key: url.absoluteString) { (data: Data?) in
+        cache.retrieve(from: .memory, key: key) { (data: Data?) in
           if let data = data {
             let image = UIImage(data: data)
             XCTAssert(image != nil, "no image in cache.")

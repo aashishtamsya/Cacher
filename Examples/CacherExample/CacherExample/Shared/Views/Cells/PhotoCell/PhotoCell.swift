@@ -19,8 +19,8 @@ final class PhotoCell: UITableViewCell {
   @IBOutlet fileprivate weak var likeImageView: UIImageView!
   @IBOutlet fileprivate weak var likeCountLabel: UILabel!
   
-  fileprivate var profileCancelToken: RequestToken?
-  fileprivate var photoCancelToken: RequestToken?
+  fileprivate var profileCancelToken: CancelToken?
+  fileprivate var photoCancelToken: CancelToken?
   fileprivate var photoURL: URL?
   fileprivate var profileURL: URL?
   
