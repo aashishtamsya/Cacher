@@ -29,6 +29,9 @@ Cacher is an image downloading and caching framework. Also support downloading f
 
 The following project has been excuted with the help of tracking task in [Trello Board](https://trello.com/b/MILJtosG). Agile approach was used to develop the project.
 
+[CodeBeat Report](https://codebeat.co/projects/github-com-aashishtamsya-cacher-develop)
+
+
 
 ## Unsplash Implmentation
 
@@ -45,6 +48,7 @@ The following project has been excuted with the help of tracking task in [Trello
 ## Pull to refresh
 
 ![Pull to refresh](/Resources/Pull_To_Refresh.gif)
+
 
 ## Contributor
 
