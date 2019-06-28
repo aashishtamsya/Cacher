@@ -21,7 +21,7 @@ public class Cacher {
     session = URLSession(configuration: .default)
   }
 }
-
+// MARK: - Cache
 extension Cacher: Cache {
   public func store<T>(to: CacheType, key: String, object: T, _ completion: (() -> Void)?) where T: Cachable {
     switch to {
@@ -37,26 +37,9 @@ extension Cacher: Cache {
   public func retrieve<T>(from: CacheType, key: String, _ completion: @escaping (T?) -> Void) where T: Cachable {
     switch from {
     case .disk:
-      diskCache.retrieve(key: key) { (object: T?) in
-        if let object = object {
-          completion(object)
-          return
-        } else {
-          completion(nil)
-          return
-        }
-      }
-      
+      diskCache.retrieve(key: key, completion)
     case .memory:
-      memoryCache.retrieve(key: key) { (object: T?) in
-        if let object = object {
-          completion(object)
-          return
-        } else {
-          completion(nil)
-          return
-        }
-      }
+      memoryCache.retrieve(key: key, completion)
     case .none:
       completion(nil)
     }
@@ -67,14 +50,14 @@ extension Cacher: Cache {
     taskPool.removeAll()
   }
 }
-
-extension Cacher: Download {
-  public func download<T>(cacheType type: CacheType, url: URL, completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
+// MARK: - Downloadable
+extension Cacher: Downloadable {
+  public func download<T>(cacheType type: CacheType, url: URL, completion: @escaping (T?, CacheType) -> Void) -> CancelToken? where T: Cachable {
     guard let key = url.key else {
       completion(nil, .none)
       return nil
     }
-    var token: RequestToken?
+    var token: CancelToken?
     switch type {
     case .none:
       return nil
@@ -90,17 +73,17 @@ extension Cacher: Download {
     return token
   }
   
-  public func cancel(_ url: URL, token: RequestToken? = nil) -> Bool {
+  public func cancel(_ url: URL, token: CancelToken? = nil) -> Bool {
     guard let task = token?.task, let cancelToken = taskPool.filter({ $0.key == task && $0.value == url }).first?.key else { return false }
     cancelToken.cancel()
     taskPool.removeValue(forKey: cancelToken)
     return true
   }
 }
-
+// MARK: - Private Methods
 private extension Cacher {
-  func process<T>(retrievedObject object: Data?, url: URL, type: CacheType, _ completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
-    var token: RequestToken?
+  func process<T>(retrievedObject object: Data?, url: URL, type: CacheType, _ completion: @escaping (T?, CacheType) -> Void) -> CancelToken? where T: Cachable {
+    var token: CancelToken?
     if let data = object {
       completion(data as? T, type)
     } else {
@@ -108,9 +91,9 @@ private extension Cacher {
         self?.storeInCache(CacheSettings(type: type, url: url, object: data, image: nil), completion)
       }
       task.resume()
-      let requestToken = RequestToken(task)
+      let cancelToken = CancelToken(task)
       taskPool[task] = url
-      token = requestToken
+      token = cancelToken
     }
     return token
   }

@@ -1,5 +1,5 @@
 //
-//  RequestTokenTests.swift
+//  CancelTokenTests.swift
 //  CacherTests
 //
 //  Created by Aashish Tamsya on 28/06/19.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import Cacher
 
-final class RequestTokenTests: XCTestCase {
+final class CancelTokenTests: XCTestCase {
   
   func test_requestToken_hashable() {
     guard let imageURL = URL(string: "http://s75.mindvalley.us/mindvalleyacademy/media/images/teaser-video-cover.jpg") else {
