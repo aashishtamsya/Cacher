@@ -73,14 +73,20 @@ extension Cacher: Download {
       completion(nil, .none)
       return nil
     }
+    var token: RequestToken?
     switch type {
     case .none:
       return nil
     case .disk:
-      return downloadToDisk(url, key: key, completion: completion)
+      diskCache.retrieve(key: key) { [weak self] (object: Data?) in
+        token = self?.process(object: object, url: url, type: .disk, completion)
+      }
     case .memory:
-      return downloadToMemory(url, key: key, completion: completion)
+      memoryCache.retrieve(key: key) { [weak self] (object: Data?) in
+        token = self?.process(object: object, url: url, type: .memory, completion)
+      }
     }
+    return token
   }
   
   public func cancel(_ url: URL, token: RequestToken? = nil) -> Bool {
@@ -92,23 +98,7 @@ extension Cacher: Download {
 }
 
 private extension Cacher {
-  func downloadToMemory<T>(_ url: URL, key: String, completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
-    var token: RequestToken?
-    memoryCache.retrieve(key: key) { [weak self] (object: Data?) in
-      token = self?.process(object: object, url: url, completion)
-    }
-    return token
-  }
-  
-  func downloadToDisk<T>(_ url: URL, key: String, completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
-    var token: RequestToken?
-    diskCache.retrieve(key: key) { [weak self] (object: Data?) in
-      token = self?.process(object: object, url: url, completion)
-    }
-    return token
-  }
-  
-  func process<T>(object: Data?, url: URL, _ completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
+  func process<T>(object: Data?, url: URL, type: CacheType, _ completion: @escaping (T?, CacheType) -> Void) -> RequestToken? where T: Cachable {
     var token: RequestToken?
     if let data = object {
       completion(data as? T, .disk)
@@ -118,7 +108,16 @@ private extension Cacher {
           completion(nil, .none)
           return
         }
-        strongSelf.memoryCache.store(key: url.absoluteString, object: data) {
+        switch type {
+        case .disk:
+          strongSelf.diskCache.store(key: url.absoluteString, object: data) {
+            completion(data as? T, .none)
+          }
+        case .memory:
+          strongSelf.memoryCache.store(key: url.absoluteString, object: data) {
+            completion(data as? T, .none)
+          }
+        case .none:
           completion(data as? T, .none)
         }
       }
