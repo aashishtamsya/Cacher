@@ -1,12 +1,12 @@
 PODS:
   - Alamofire (4.8.2)
-  - Cacher (0.0.6)
+  - Cacher (0.1.0)
   - ReachabilitySwift (4.3.1)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
-  - Cacher (from `https://github.com/aashishtamsya/Cacher`, branch `develop`)
+  - Cacher (from `https://github.com/aashishtamsya/Cacher`, tag `0.1.0`)
   - ReachabilitySwift (~> 4.3.1)
   - SwiftyJSON (~> 5.0.0)
 
@@ -18,20 +18,20 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Cacher:
-    :branch: develop
     :git: https://github.com/aashishtamsya/Cacher
+    :tag: 0.1.0
 
 CHECKOUT OPTIONS:
   Cacher:
-    :commit: 50bac2991c1bae5ea278a59a4c5b99e09d7a3bf1
     :git: https://github.com/aashishtamsya/Cacher
+    :tag: 0.1.0
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Cacher: a098a6b04641701bb45836bc733a1f5b9eaba28b
+  Cacher: 4a6c8edbfcb7cf4f45de1df0b3521003a99f373a
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 30628320d3ec233f030fd803b54944751198bcd8
+PODFILE CHECKSUM: 2ac151f2c0926c76a5b1cf731a7edc1c1b50cea3
 
 COCOAPODS: 1.7.0
