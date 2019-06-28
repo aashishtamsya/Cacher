@@ -1,5 +1,5 @@
 //
-//  RequestToken.swift
+//  CacnelToken.swift
 //  Cacher
 //
 //  Created by Aashish Tamsya on 26/06/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class RequestToken: Hashable {
+public class CancelToken: Hashable {
   weak var task: URLSessionDataTask?
   
   public func hash(into hasher: inout Hasher) {
@@ -25,8 +25,8 @@ public class RequestToken: Hashable {
     return true
   }
 }
-extension RequestToken: Equatable {
-  public static func == (lhs: RequestToken, rhs: RequestToken) -> Bool {
+extension CancelToken: Equatable {
+  public static func == (lhs: CancelToken, rhs: CancelToken) -> Bool {
     return lhs.hashValue == rhs.hashValue
   }
 }
