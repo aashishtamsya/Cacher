@@ -7,9 +7,8 @@
 //
 
 import Foundation
-
 public protocol Cache {
-  func store<T: Cachable>(to: CacheType, key: String, object: T, _ completion: (() -> Void)?)
+  func store<T: Cachable>(_ setting: (to: CacheType, key: String), object: T, _ completion: (() -> Void)?)
   
   func retrieve<T: Cachable>(from: CacheType, key: String, _ completion: @escaping (_ object: T?) -> Void)
   

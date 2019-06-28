@@ -25,7 +25,7 @@ private extension ViewController {
     guard let imageURL = URL(string: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"),
       let image = try? UIImage(data: Data(contentsOf: imageURL)) else { return }
     let cache = Cacher.sharedCache
-    cache.store(to: .memory, key: "google", object: image, nil)
+    cache.store((.memory, "google"), object: image, nil)
     cache.retrieve(from: .memory, key: "google") { [weak self] (image: UIImage?) in
       if let image = image {
         self?.imageView.image = image

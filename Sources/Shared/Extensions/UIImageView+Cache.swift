@@ -9,7 +9,7 @@
 import Foundation
 
 extension UIImageView {
-  public func loadImage(withURL url: URL, placeholder: UIImage? = nil, transition: ImageTransition? = .none, completion: ((UIImage?) -> Void)? = nil) -> RequestToken? {
+  public func loadImage(withURL url: URL, placeholder: UIImage? = nil, transition: ImageTransition? = .none, completion: ((UIImage?) -> Void)? = nil) -> CancelToken? {
     let cache = Cacher.sharedCache
     let token = cache.download(cacheType: .memory, url: url) { (object: Data?, cacheType: CacheType) in
       if let data = object, let image = UIImage(data: data) {
@@ -62,7 +62,7 @@ extension UIImageView {
     })
   }
   
-  public func cancelImageLoading(_ url: URL, cancelToken: RequestToken? = nil) -> Bool {
+  public func cancelImageLoading(_ url: URL, cancelToken: CancelToken? = nil) -> Bool {
     return Cacher.sharedCache.cancel(url, token: cancelToken)
   }
 }

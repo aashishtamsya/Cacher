@@ -17,7 +17,7 @@ final class AlbumPhotoCell: UITableViewCell {
   @IBOutlet fileprivate weak var photoIdLabel: UILabel!
   // MARK: - Properties
   fileprivate var url: URL?
-  fileprivate var cancelToken: RequestToken?
+  fileprivate var cancelToken: CancelToken?
   // MARK: - Life Cycle
   override func awakeFromNib() {
     super.awakeFromNib()
