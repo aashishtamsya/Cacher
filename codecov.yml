@@ -4,7 +4,7 @@ coverage:
   ignore:
   - Pods
   - Resources
-  - Tests
+  - CacherTests
   - Examples
   - CacherExample
   - CacherExampleTests
