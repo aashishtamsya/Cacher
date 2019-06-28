@@ -11,9 +11,12 @@ import Foundation
 extension UIImageView {
   public func loadImage(withURL url: URL, placeholder: UIImage? = nil, transition: ImageTransition? = .none, completion: ((UIImage?) -> Void)? = nil) -> CancelToken? {
     let token = Cacher.sharedCache.download(cacheType: .memory, url: url) { [weak self] (object: Data?, cacheType: CacheType) in
-      guard let data = object, let image = UIImage(data: data),
-      let strongSelf = self, strongSelf.requiresTransition(transition: transition ?? .none, cacheType: cacheType) else {
+      guard let data = object, let image = UIImage(data: data) else {
         self?.set(placeholder, completion)
+        return
+      }
+      guard let strongSelf = self, strongSelf.requiresTransition(transition: transition ?? .none, cacheType: cacheType) else {
+        self?.set(image, completion)
         return
       }
       if let transition = transition {
@@ -30,7 +33,7 @@ extension UIImageView {
   private func set(_ image: UIImage?, _ completion: ((UIImage?) -> Void)? = nil) {
     DispatchQueue.main.async {
       self.image = image
-      completion?(nil)
+      completion?(image)
     }
   }
   
