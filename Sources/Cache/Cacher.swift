@@ -104,22 +104,7 @@ private extension Cacher {
       completion(data as? T, .disk)
     } else {
       let task = self.session.dataTask(with: url) { [weak self] data, _, _ in
-        guard let strongSelf = self, let data = data else {
-          completion(nil, .none)
-          return
-        }
-        switch type {
-        case .disk:
-          strongSelf.diskCache.store(key: url.absoluteString, object: data) {
-            completion(data as? T, .none)
-          }
-        case .memory:
-          strongSelf.memoryCache.store(key: url.absoluteString, object: data) {
-            completion(data as? T, .none)
-          }
-        case .none:
-          completion(data as? T, .none)
-        }
+        self?.store(data, on: type, key: url.absoluteString, completion)
       }
       task.resume()
       let requestToken = RequestToken(task)
@@ -127,5 +112,24 @@ private extension Cacher {
       token = requestToken
     }
     return token
+  }
+  
+  func store<T>(_ object: Data?, on type: CacheType, key: String, _ completion: @escaping (T?, CacheType) -> Void) where T: Cachable {
+    guard let data = object else {
+      completion(nil, .none)
+      return
+    }
+    switch type {
+    case .disk:
+      diskCache.store(key: key, object: data) {
+        completion(data as? T, .none)
+      }
+    case .memory:
+      memoryCache.store(key: key, object: data) {
+        completion(data as? T, .none)
+      }
+    case .none:
+      completion(data as? T, .none)
+    }
   }
 }

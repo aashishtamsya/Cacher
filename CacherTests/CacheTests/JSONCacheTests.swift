@@ -55,9 +55,7 @@ final class JSONCacheTests: XCTestCase {
     let expectation = self.expectation(description: "Testing caching of JSON file from url and retrieving it back from cache.")
     let cache = Cacher.sharedCache
     _ = cache.download(cacheType: .disk, url: jsonURL) { (object: Data?, cacheType) in
-      print(cacheType)
       cache.retrieve(from: .disk, key: key) { (data: Data?) in
-        print("🔥 retrieved from disk")
         XCTAssert(data != nil, "no json file data")
         expectation.fulfill()
       }
